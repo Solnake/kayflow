@@ -1,0 +1,21 @@
+Check Service State for MSSQL$SQLKFL (write result into variable SQL2008R2_X86)
+if Variable SQL2008R2_X86 Equals NOTINSTALLED
+  Get System Setting Windows Vista into SQL2008R2_ISVISTA_X86
+  if Variable SQL2008R2_ISVISTA_X86 Equals FALSE
+    Get System Setting Windows XP into SQL2008R2_ISXP_X86
+    if Variable SQL2008R2_ISXP_X86 Equals TRUE
+      Comment: For Windows 2000, at least Service Pack 3 is required
+      Get System Setting Service Pack 2 into SQL2008R2_ISSP2_X86
+      if Variable SQL2008R2_ISSP2_X86 Equals FALSE
+        MessageBox: $TITLE$ Setup, $TITLE$ requires at least Service Pack 2 or later. Please upgrade your operating system and try again.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+        Terminate Installation
+      end
+    end
+  end
+  Set Variable SQL2008R2_X86 to FALSE
+  Set Variable PREREQ to TRUE
+  Set Variable PRELIST to $PRELIST$$NEWLINE$Microsoft SQL Server Express 2008 R2
+else
+  Set Variable SQL2008R2_X86 to TRUE
+end
+ 

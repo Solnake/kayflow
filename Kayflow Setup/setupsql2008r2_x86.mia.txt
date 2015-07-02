@@ -1,0 +1,35 @@
+if Variable SQL2008R2_X86 Equals FALSE
+  Set Variable PROGRESSTEXT to Installing Microsoft SQL Server Express 2008 R2
+  Set Variable SQL2008R2_FILEBAG_X86 to 
+  Set Variable SQL2008R2_RESULT_X86 to 
+  Set Variable SQL2008R2_ERROR_X86 to 
+  Get Common Folder Location Special->Boot Path into SQL2008R2_BOOTPATH_X86
+  Define File Bag : #IADIR#\runtimes\sqlexpress2008r2bin_x86.7zip, include files recursively, get runtime location of files into variable SQL2008R2_FILEBAG_X86
+  Extract 7Zip Archive $SQL2008R2_FILEBAG_X86$\sqlexpress2008r2bin_x86.7zip into folder $SQL2008R2_BOOTPATH_X86$ (get result into variable SQL2008R2_EXTRACT_X86)
+  if Variable SQL2008R2_EXTRACT_X86 not Equals SUCCESS
+    MessageBox: $TITLE$ Setup, Unable to extract temporary files for Microsoft SQL Server Express 2008 R2 installation. $SQL2008R2_EXTRACT_X86$$NEWLINE$$NEWLINE$Please free up some space on your boot drive and try again.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+    Terminate Installation
+  end
+  Get System Setting Logged on Computer Name into SQL_COMPUTER_NAME
+  Get System Setting Logged on User Name into SQL_USER_NAME
+  Set Variable PROGRESSMODE to MARQUEE
+  Set Persistent Variable SQL2008R2_COMMAND_LINE_X86 to /q /ACTION=Install /SECURITYMODE=SQL /SAPWD="qwe@poi1" /INSTANCENAME="SQLKFL" /FEATURES=SQLEngine,Replication,SDK /SQLSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /SQLSYSADMINACCOUNTS="$SQL_COMPUTER_NAME$\$SQL_USER_NAME$" /IAcceptSQLServerLicenseTerms=TRUE /ENU /BROWSERSVCSTARTUPTYPE=Automatic /TCPENABLED=1 
+  Run Program $SQL2008R2_BOOTPATH_X86$\sqlexpress2008r2bin_x86\setup.exe $SQL2008R2_COMMAND_LINE_X86$ (WAIT, get result into variable SQL2008R2_RESULT_X86)
+  Recursively Delete Files $SQL2008R2_BOOTPATH_X86$\sqlexpress2008r2bin_x86\*.*
+  Call DLL Function kernel32.dll->RemoveDirectoryA
+  Set Variable PROGRESSMODE to 
+  if Variable SQL2008R2_RESULT_X86 Equals 3010
+    MessageBox: $TITLE$ Setup, Your computer needs to be restarted before $TITLE$ Setup can continue.$NEWLINE$$NEWLINE$Please save your work in all running programs and click OK to restart your computer. Setup will resume once your computer restarts.$NEWLINE$$NEWLINE$If you click CANCEL, setup will exit. You will have to run setup again at a later time to install $TITLE$.
+    if Variable REBOOTNOW Equals OK
+      Reboot Computer and Resume Setup
+    else
+      Terminate Installation
+    end
+  else
+    if Variable SQL2008R2_RESULT_X86 not Equals 0
+      MessageBox: $TITLE$ Setup, Microsoft SQL Server Express 2008 R2 could not be installed. Please use Windows Update to manually install this update on your system.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+      Terminate Installation
+    end
+  end
+end
+ 

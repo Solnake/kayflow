@@ -1,0 +1,30 @@
+Set Variable ISWINDOWS64BIT to FALSE
+Get System Setting Windows in 64 bit Mode into ISWINDOWS64BIT
+if Variable ISWINDOWS64BIT Equals TRUE
+  Set x64 - Native 64 bit Windows, AMD64 and EM64T Architectures - installation mode
+  Check Service State for MSSQL$SQLKFL (write result into variable SQL2008R2_X64)
+  if Variable SQL2008R2_X64 Equals NOTINSTALLED
+    Get System Setting Windows Vista into SQL2008R2_ISVISTA_X64
+    if Variable SQL2008R2_ISVISTA_X64 Equals FALSE
+      Get System Setting Windows XP into SQL2008R2_ISXP_X64
+      if Variable SQL2008R2_ISXP_X64 Equals TRUE
+        Comment: For Windows 2000, at least Service Pack 3 is required
+        Get System Setting Service Pack 2 into SQL2008R2_ISSP2_X64
+        if Variable SQL2008R2_ISSP2_X64 Equals FALSE
+          MessageBox: $TITLE$ Setup, $TITLE$ requires at least Service Pack 2 or later. Please upgrade your operating system and try again.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+          Terminate Installation
+        end
+      end
+    end
+    Set Variable SQL2008R2_X64 to FALSE
+    Set Variable PREREQ to TRUE
+    Set Variable PRELIST to $PRELIST$$NEWLINE$Microsoft SQL Server Express 2008 R2 (x64)
+  else
+    Set Variable SQL2008R2_X64 to TRUE
+  end
+  Set Win32 - Native 32 bit Windows and Windows 32 on Windows 64 (WOW64) - installation mode
+else
+  MessageBox: $TITLE$ Setup, $TITLE$ requires a 64 bit operating system. Please upgrade your operating system and try again.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+  Terminate Installation
+end
+ 
