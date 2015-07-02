@@ -1,0 +1,352 @@
+.dxtlControl_Moderno
+{
+	cursor: default;
+	font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+	color: #2B2B2B;
+	border: 1px none #d1d1d1;
+}
+.dxtlControl_Moderno caption
+{
+	background: #F7FAFF none;
+	color: #2B2B2B;
+	border-bottom: 0;
+	border: 1px solid #d1d1d1;
+	font-weight: normal;
+	text-align: center;
+	padding: 5px 5px 6px;
+}
+.dxtlControl_Moderno .dxtlDataTable
+{
+	border: 1px solid #d1d1d1;
+}
+
+/* Indent cells */
+.dxtlIndent_Moderno,
+.dxtlIndentWithButton_Moderno
+{
+	vertical-align: top;
+	background: white none no-repeat top center;
+}
+.dxtlIndent_Moderno
+{
+	padding: 0 11px;
+}
+.dxtlICheckBox_Moderno
+{
+	margin: auto;
+}
+.dxtlIndentWithButton_Moderno
+{
+	padding: 10px 4px;
+}
+.dxtlSelectionCell_Moderno
+{
+	border: 1px solid #d1d1d1;
+	padding: 0 4px;
+}
+
+/* Tree-lines cells */
+.dxtlLineRoot_Moderno
+{
+	background: White  repeat-y center top;
+}
+.dxtlLineFirst_Moderno
+{
+}
+.dxtlLineMiddle_Moderno
+{
+}
+.dxtlLineLast_Moderno
+{
+}
+.dxtlLineFirstRtl_Moderno
+{
+}
+.dxtlLineMiddleRtl_Moderno
+{
+}
+.dxtlLineLastRtl_Moderno
+{
+}
+
+/* Headers */
+.dxtlControl_Moderno .dxtlHSDC 
+{
+    background: none;
+    border: 1px Solid #d1d1d1;
+}
+.dxtlHeader_Moderno
+{
+	border: 1px Solid #d1d1d1;
+	background: #fafafa none;
+	padding: 8px 10px 7px;
+	font-weight: normal;
+}
+.dxtlDataTable .dxtlHeader_Moderno
+{
+    border-top: 0;
+    border-right: 0;
+}
+.dxtlControl_Moderno[dir=rtl] .dxtlDataTable .dxtlHeader_Moderno
+{
+    border-left: 0;
+    border-right: 1px Solid #d1d1d1;
+}
+.dxtlDataTable .dxtlHeader_Moderno:first-child 
+{
+    border-left-width: 0;
+}
+.dxtlDataTable .dxtlHeader_Moderno:last-child 
+{
+    border-right-width: 0;
+}
+.dxtlHeader_Moderno table.dxtl
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader_Moderno td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader_Moderno,
+.dxtlHeader_Moderno td.dxtl
+{
+    color: #7e7e7e;
+	white-space: nowrap;
+	text-align: left;
+	overflow: hidden;
+}
+
+/* Nodes */
+.dxtlNode_Moderno
+{
+	background: white;
+}
+.dxtlAltNode_Moderno
+{
+	background-color: #EEF6FB;
+}
+.dxtlSelectedNode_Moderno
+{
+	background-color: #f3f3f3;
+}
+.dxtlFocusedNode_Moderno
+{
+	background-color: #e5e5e5;
+}
+.dxtlInlineEditNode_Moderno
+{
+	background: white none;
+}
+.dxtlEditFormDisplayNode_Moderno
+{
+	background: #ECF4FE none;
+}
+.dxtlNode_Moderno td.dxtl, 
+.dxtlAltNode_Moderno  td.dxtl, 
+.dxtlSelectedNode_Moderno td.dxtl, 
+.dxtlFocusedNode_Moderno td.dxtl,
+.dxtlEditFormDisplayNode_Moderno td.dxtl,
+.dxtlCommandCell_Moderno
+{
+	padding: 8px 10px;
+	border: 1px solid #d1d1d1;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.dxtlCommandCell_Moderno
+{
+	padding: 0 10px;
+}
+.dxtlInlineEditNode_Moderno td.dxtl
+{
+	border: 1px solid #d1d1d1;
+	padding: 1px;
+}
+/* Scrolling */
+.dxtlControl_Moderno .dxtlHSDC,
+.dxtlControl_Moderno .dxtlCSD,
+.dxtlControl_Moderno .dxtlFSDC
+{
+    border: 1px solid #d1d1d1;
+}
+.dxtlControl_Moderno .dxtlHSDC .dxtlCSD,
+.dxtlControl_Moderno .dxtlFSDC .dxtlCSD,
+.dxtlControl_Moderno .dxtlHSDC .dxtlDataTable,
+.dxtlControl_Moderno .dxtlCSD .dxtlDataTable,
+.dxtlControl_Moderno .dxtlFSDC .dxtlDataTable
+{
+    border: 0;
+}
+.dxtlControl_Moderno .dxtlCSD .dxtlDataTable .dxtlHSEC
+{
+    border-left: 1px solid #d1d1d1!important;
+}
+.dxtlControl_Moderno .dxtlHSDC .dxtlHeader_Moderno 
+{
+    border-bottom: 0;
+}
+.dxtlControl_Moderno .dxtlFSDC .dxtlFooter_Moderno td.dxtl,
+.dxtlControl_Moderno .dxtlFSDC .dxtlFooter_Moderno .dxtlIndent_Moderno
+{
+    border-top: 0!important;
+}
+.dxtlControl_Moderno .dxtlHSDC + .dxtlCSD
+{
+    border-top: 0;
+}
+.dxtlControl_Moderno .dxtlCSD + .dxtlFSDC
+{
+    border-top: 0;
+}
+
+/* Preview */
+.dxtlPreview_Moderno
+{
+	background-color: white;
+	padding: 15px 15px 15px 20px;
+	border: 1px solid #d1d1d1;
+	overflow: hidden;
+}
+
+/* Footers */
+.dxtlGroupFooter_Moderno
+{
+	background-color: white;
+}
+.dxtlFooter_Moderno td.dxtl,
+.dxtlFooter_Moderno .dxtlIndent_Moderno,
+.dxtlControl_Moderno .dxtlFSDC
+{
+	background-color: #fafafa;
+}
+.dxtlGroupFooter_Moderno td.dxtl,
+.dxtlFooter_Moderno td.dxtl
+{
+	white-space: nowrap;
+	border: 1px solid #d1d1d1;
+	overflow: hidden;
+}
+.dxtlFooter_Moderno td.dxtl,
+.dxtlFooter_Moderno .dxtlIndent_Moderno
+{
+    border-top: 1px solid #d1d1d1!important;
+}
+.dxtlFooter_Moderno td.dxtl
+{
+	padding: 12px 10px;
+}
+.dxtlGroupFooter_Moderno td.dxtl
+{
+    padding: 8px 10px;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel_Moderno,
+.dxtlPagerBottomPanel_Moderno
+{
+	padding: 4px 0;
+}
+.dxtlPagerTopPanel_Moderno
+{
+	border-bottom: 1px none #d1d1d1;
+}
+.dxtlPagerBottomPanel_Moderno
+{
+    border-top: 1px none #d1d1d1;
+}
+.dxtlControl_Moderno .dxpLite_Moderno
+{
+	padding: 6px 0;
+}
+
+/* Editing */
+.dxtlEditForm_Moderno
+{
+	border: 1px solid #d1d1d1;
+	padding: 10px 15px;
+}
+.dxtlEditFormCaption_Moderno,
+.dxtlEditFormEditCell_Moderno
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption_Moderno
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError_Moderno
+{
+	background: #DBEBFF none;
+	color: #FF0000;
+	padding: 6px 10px;
+	border: 1px solid #d1d1d1;
+}
+.dxtlPopupEditForm_Moderno
+{
+	padding: 12px;
+}
+
+/* Links */
+.dxtlControl_Moderno a,
+.dxtlCommandCell_Moderno a
+{
+	color: #045cad;
+	text-decoration: underline;
+}
+.dxtlControl_Moderno a:hover
+{
+	color: #2b2b2b;
+	text-decoration: underline;
+}
+.dxtlHeader_Moderno a,
+.dxtlFocusedNode_Moderno a,
+.dxtlSelectedNode_Moderno a
+{
+	color: #045cad;
+}
+.dxtlHeader_Moderno a:hover,
+.dxtlFocusedNode_Moderno a:hover,
+.dxtlSelectedNode_Moderno a:hover
+{
+	color: #2b2b2b;
+}
+.dxtlCommandCell_Moderno a
+{
+	margin-right: 3px;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel_Moderno
+{
+	font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+	color: #2B2B2B;
+	background-color: White;
+	border: 1px solid #cfcfcf;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+}
+.dxtlLoadingPanel_Moderno td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 15px 34px 15px 20px;
+}
+.dxtlLoadingPanel_Moderno .dxlp-loadingImage
+{
+	background-image: url('../Web/Loading.gif');
+	height: 40px;
+	width: 40px;
+}
+
+/* Disabled */
+.dxtlDisabled_Moderno,
+.dxtlDisabled_Moderno .dxtl_Moderno
+{
+	color: #A1A1A1;
+	cursor: default;
+}
+
+

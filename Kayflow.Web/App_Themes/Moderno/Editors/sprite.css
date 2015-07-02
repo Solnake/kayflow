@@ -1,0 +1,589 @@
+.dxeButtonEditButtonHover_Moderno .dxEditors_edtDropDown_Moderno,
+.dxeButtonEditButtonHover_Moderno .dxEditors_edtEllipsis_Moderno,
+.dxeButtonEditButtonPressed_Moderno .dxEditors_edtDropDown_Moderno,
+.dxeButtonEditButtonPressed_Moderno .dxEditors_edtEllipsis_Moderno,
+.dxEditors_caRefresh_Moderno,
+.dxEditors_edtCalendarFNNextYear_Moderno,
+.dxEditors_edtCalendarFNPrevYear_Moderno,
+.dxEditors_edtCalendarNextMonth_Moderno,
+.dxEditors_edtCalendarNextMonthDisabled_Moderno,
+.dxEditors_edtCalendarNextYear_Moderno,
+.dxEditors_edtCalendarNextYearDisabled_Moderno,
+.dxEditors_edtCalendarPrevMonth_Moderno,
+.dxEditors_edtCalendarPrevMonthDisabled_Moderno,
+.dxEditors_edtCalendarPrevYear_Moderno,
+.dxEditors_edtCalendarPrevYearDisabled_Moderno,
+.dxEditors_edtDETSClockFace_Moderno,
+.dxEditors_edtDETSHourHand_Moderno,
+.dxEditors_edtDETSMinuteHand_Moderno,
+.dxEditors_edtDETSSecondHand_Moderno,
+.dxEditors_edtDropDown_Moderno,
+.dxEditors_edtDropDownDisabled_Moderno,
+.dxEditors_edtEllipsis_Moderno,
+.dxEditors_edtEllipsisDisabled_Moderno,
+.dxEditors_edtError_Moderno,
+.dxEditors_edtRadioButtonChecked_Moderno,
+.dxEditors_edtRadioButtonCheckedDisabled_Moderno,
+.dxEditors_edtRadioButtonUnchecked_Moderno,
+.dxEditors_edtRadioButtonUncheckedDisabled_Moderno,
+.dxEditors_edtSpinEditDecrementImage_Moderno,
+.dxEditors_edtSpinEditDecrementImageDisabled_Moderno,
+.dxEditors_edtSpinEditIncrementImage_Moderno,
+.dxEditors_edtSpinEditIncrementImageDisabled_Moderno,
+.dxEditors_edtSpinEditLargeDecImage_Moderno,
+.dxEditors_edtSpinEditLargeDecImageDisabled_Moderno,
+.dxEditors_edtSpinEditLargeIncImage_Moderno,
+.dxEditors_edtSpinEditLargeIncImageDisabled_Moderno,
+.dxEditors_edtTokenBoxTokenRemoveButton_Moderno,
+.dxEditors_fcadd_Moderno,
+.dxEditors_fcaddhot_Moderno,
+.dxEditors_fcgroupaddcondition_Moderno,
+.dxEditors_fcgroupaddgroup_Moderno,
+.dxEditors_fcgroupand_Moderno,
+.dxEditors_fcgroupnotand_Moderno,
+.dxEditors_fcgroupnotor_Moderno,
+.dxEditors_fcgroupor_Moderno,
+.dxEditors_fcgroupremove_Moderno,
+.dxEditors_fcopany_Moderno,
+.dxEditors_fcopbegin_Moderno,
+.dxEditors_fcopbetween_Moderno,
+.dxEditors_fcopblank_Moderno,
+.dxEditors_fcopcontain_Moderno,
+.dxEditors_fcopend_Moderno,
+.dxEditors_fcopequal_Moderno,
+.dxEditors_fcopgreater_Moderno,
+.dxEditors_fcopgreaterorequal_Moderno,
+.dxEditors_fcopless_Moderno,
+.dxEditors_fcoplessorequal_Moderno,
+.dxEditors_fcoplike_Moderno,
+.dxEditors_fcopnotany_Moderno,
+.dxEditors_fcopnotbetween_Moderno,
+.dxEditors_fcopnotblank_Moderno,
+.dxEditors_fcopnotcontain_Moderno,
+.dxEditors_fcopnotequal_Moderno,
+.dxEditors_fcopnotlike_Moderno,
+.dxEditors_fcremove_Moderno,
+.dxEditors_fcremovehot_Moderno,
+.dxeSpinDecButtonHover_Moderno .dxEditors_edtSpinEditDecrementImage_Moderno,
+.dxeSpinDecButtonPressed_Moderno .dxEditors_edtSpinEditDecrementImage_Moderno,
+.dxeSpinIncButtonHover_Moderno .dxEditors_edtSpinEditIncrementImage_Moderno,
+.dxeSpinIncButtonPressed_Moderno .dxEditors_edtSpinEditIncrementImage_Moderno,
+.dxeSpinLargeDecButtonHover_Moderno .dxEditors_edtSpinEditLargeDecImage_Moderno,
+.dxeSpinLargeDecButtonPressed_Moderno .dxEditors_edtSpinEditLargeDecImage_Moderno,
+.dxeSpinLargeDecButtonPressed_Moderno .dxEditors_edtSpinEditLargeIncImage_Moderno,
+.dxeSpinLargeIncButtonHover_Moderno .dxEditors_edtSpinEditLargeIncImage_Moderno
+{
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.dxeButtonEditButtonHover_Moderno .dxEditors_edtDropDown_Moderno
+{
+    background-position: -95px -151px;
+    width: 10px;
+    height: 5px;
+}
+.dxeButtonEditButtonHover_Moderno .dxEditors_edtEllipsis_Moderno
+{
+    background-position: -106px -150px;
+    width: 12px;
+    height: 3px;
+}
+.dxeButtonEditButtonPressed_Moderno .dxEditors_edtDropDown_Moderno
+{
+    background-position: -114px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxeButtonEditButtonPressed_Moderno .dxEditors_edtEllipsis_Moderno
+{
+    background-position: -45px -158px;
+    width: 12px;
+    height: 3px;
+}
+.dxEditors_caRefresh_Moderno
+{
+    background-position: -32px -124px;
+    width: 32px;
+    height: 32px;
+}
+.dxEditors_edtCalendarFNNextYear_Moderno
+{
+    background-position: -40px -202px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarFNPrevYear_Moderno
+{
+    background-position: -112px -182px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarNextMonth_Moderno
+{
+    background-position: -20px -202px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarNextMonthDisabled_Moderno
+{
+    background-position: -72px -182px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarNextYear_Moderno
+{
+    background-position: 0px -182px;
+    width: 23px;
+    height: 19px;
+}
+.dxEditors_edtCalendarNextYearDisabled_Moderno
+{
+    background-position: -24px -182px;
+    width: 23px;
+    height: 19px;
+}
+.dxEditors_edtCalendarPrevMonth_Moderno
+{
+    background-position: 0px -202px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarPrevMonthDisabled_Moderno
+{
+    background-position: -92px -182px;
+    width: 19px;
+    height: 19px;
+}
+.dxEditors_edtCalendarPrevYear_Moderno
+{
+    background-position: -37px -162px;
+    width: 23px;
+    height: 19px;
+}
+.dxEditors_edtCalendarPrevYearDisabled_Moderno
+{
+    background-position: -48px -182px;
+    width: 23px;
+    height: 19px;
+}
+.dxEditors_edtDETSClockFace_Moderno
+{
+    background-position: 0px 0px;
+    width: 123px;
+    height: 123px;
+}
+.dxEditors_edtDETSHourHand_Moderno
+{
+    background-position: -8px -124px;
+    width: 7px;
+    height: 57px;
+}
+.dxEditors_edtDETSHourHand_Moderno.
+{
+    background-position: 0px -124px \9;
+    width: 7px \9;
+    height: 57px \9;
+}
+.dxEditors_edtDETSMinuteHand_Moderno
+{
+    background-position: -24px -124px;
+    width: 7px;
+    height: 57px;
+}
+.dxEditors_edtDETSMinuteHand_Moderno.
+{
+    background-position: -16px -124px \9;
+    width: 7px \9;
+    height: 57px \9;
+}
+.dxEditors_edtDETSSecondHand_Moderno
+{
+    background-position: -124px 0px;
+    width: 5px;
+    height: 77px;
+}
+.dxEditors_edtDETSSecondHand_Moderno.
+{
+    background-position: -130px 0px \9;
+    width: 5px \9;
+    height: 77px \9;
+}
+.dxEditors_edtDropDown_Moderno
+{
+    background-position: -70px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtDropDownDisabled_Moderno
+{
+    background-position: -81px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtEllipsis_Moderno
+{
+    background-position: -120px -139px;
+    width: 12px;
+    height: 3px;
+}
+.dxEditors_edtEllipsisDisabled_Moderno
+{
+    background-position: -32px -158px;
+    width: 12px;
+    height: 3px;
+}
+.dxEditors_edtError_Moderno
+{
+    background-position: -120px -124px;
+    width: 14px;
+    height: 14px;
+}
+.dxEditors_edtRadioButtonChecked_Moderno
+{
+    background-position: -61px -157px;
+    width: 24px;
+    height: 24px;
+}
+.dxEditors_edtRadioButtonCheckedDisabled_Moderno
+{
+    background-position: -95px -124px;
+    width: 24px;
+    height: 24px;
+}
+.dxEditors_edtRadioButtonUnchecked_Moderno
+{
+    background-position: -86px -157px;
+    width: 24px;
+    height: 24px;
+}
+.dxEditors_edtRadioButtonUncheckedDisabled_Moderno
+{
+    background-position: -111px -157px;
+    width: 24px;
+    height: 24px;
+}
+.dxEditors_edtSpinEditDecrementImage_Moderno
+{
+    background-position: -92px -250px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtSpinEditDecrementImageDisabled_Moderno
+{
+    background-position: -103px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtSpinEditIncrementImage_Moderno
+{
+    background-position: -70px -250px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtSpinEditIncrementImageDisabled_Moderno
+{
+    background-position: -114px -250px;
+    width: 10px;
+    height: 5px;
+}
+.dxEditors_edtSpinEditLargeDecImage_Moderno
+{
+    background-position: -124px -91px;
+    width: 5px;
+    height: 10px;
+}
+.dxEditors_edtSpinEditLargeDecImageDisabled_Moderno
+{
+    background-position: -124px -113px;
+    width: 5px;
+    height: 10px;
+}
+.dxEditors_edtSpinEditLargeIncImage_Moderno
+{
+    background-position: -130px -80px;
+    width: 5px;
+    height: 10px;
+}
+.dxEditors_edtSpinEditLargeIncImageDisabled_Moderno
+{
+    background-position: -130px -91px;
+    width: 5px;
+    height: 10px;
+}
+.dxEditors_edtTokenBoxTokenRemoveButton_Moderno
+{
+    background-position: -65px -124px;
+    width: 29px;
+    height: 29px;
+}
+.dxEditors_fcadd_Moderno
+{
+    background-position: -14px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcaddhot_Moderno
+{
+    background-position: -60px -202px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupaddcondition_Moderno
+{
+    background-position: -42px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupaddgroup_Moderno
+{
+    background-position: -70px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupand_Moderno
+{
+    background-position: 0px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupnotand_Moderno
+{
+    background-position: -84px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupnotor_Moderno
+{
+    background-position: -98px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupor_Moderno
+{
+    background-position: -120px -143px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcgroupremove_Moderno
+{
+    background-position: 0px -250px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopany_Moderno
+{
+    background-position: -102px -202px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopbegin_Moderno
+{
+    background-position: -56px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopbetween_Moderno
+{
+    background-position: -70px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopblank_Moderno
+{
+    background-position: -112px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopcontain_Moderno
+{
+    background-position: -112px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopend_Moderno
+{
+    background-position: -116px -202px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopequal_Moderno
+{
+    background-position: -56px -250px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopgreater_Moderno
+{
+    background-position: -84px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopgreaterorequal_Moderno
+{
+    background-position: -42px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopless_Moderno
+{
+    background-position: -14px -250px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcoplessorequal_Moderno
+{
+    background-position: 0px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcoplike_Moderno
+{
+    background-position: -28px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotany_Moderno
+{
+    background-position: -28px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotbetween_Moderno
+{
+    background-position: -88px -202px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotblank_Moderno
+{
+    background-position: -56px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotcontain_Moderno
+{
+    background-position: -28px -250px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotequal_Moderno
+{
+    background-position: -14px -222px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcopnotlike_Moderno
+{
+    background-position: -98px -236px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcremove_Moderno
+{
+    background-position: -74px -202px;
+    width: 13px;
+    height: 13px;
+}
+.dxEditors_fcremovehot_Moderno
+{
+    background-position: -42px -250px;
+    width: 13px;
+    height: 13px;
+}
+.dxeSpinDecButtonHover_Moderno .dxEditors_edtSpinEditDecrementImage_Moderno
+{
+    background-position: -92px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxeSpinDecButtonPressed_Moderno .dxEditors_edtSpinEditDecrementImage_Moderno
+{
+    background-position: -103px -250px;
+    width: 10px;
+    height: 5px;
+}
+.dxeSpinIncButtonHover_Moderno .dxEditors_edtSpinEditIncrementImage_Moderno
+{
+    background-position: -125px -216px;
+    width: 10px;
+    height: 5px;
+}
+.dxeSpinIncButtonPressed_Moderno .dxEditors_edtSpinEditIncrementImage_Moderno
+{
+    background-position: -81px -250px;
+    width: 10px;
+    height: 5px;
+}
+.dxeSpinLargeDecButtonHover_Moderno .dxEditors_edtSpinEditLargeDecImage_Moderno
+{
+    background-position: -124px -102px;
+    width: 5px;
+    height: 10px;
+}
+.dxeSpinLargeDecButtonPressed_Moderno .dxEditors_edtSpinEditLargeDecImage_Moderno
+{
+    background-position: -130px -113px;
+    width: 5px;
+    height: 10px;
+}
+.dxeSpinLargeDecButtonPressed_Moderno .dxEditors_edtSpinEditLargeIncImage_Moderno
+{
+    background-position: -124px -80px;
+    width: 5px;
+    height: 10px;
+}
+.dxeSpinLargeIncButtonHover_Moderno .dxEditors_edtSpinEditLargeIncImage_Moderno
+{
+    background-position: -130px -102px;
+    width: 5px;
+    height: 10px;
+}
+.dxeTBHSys .dxEditors_edtTBMainDHPressed_Moderno,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHPressed_Moderno
+{
+	z-index: 7;
+}
+.dxeTBVSys .dxEditors_edtTBMainDHPressed_Moderno,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHPressed_Moderno
+{
+	z-index: 7;
+}
+.dxEditors_edtError_Moderno,
+.dxEditors_edtCalendarPrevYear_Moderno,
+.dxEditors_edtCalendarPrevYearDisabled_Moderno,
+.dxEditors_edtCalendarPrevMonth_Moderno,
+.dxEditors_edtCalendarPrevMonthDisabled_Moderno,
+.dxEditors_edtCalendarNextMonth_Moderno,
+.dxEditors_edtCalendarNextMonthDisabled_Moderno,
+.dxEditors_edtCalendarNextYear_Moderno,
+.dxEditors_edtCalendarNextYearDisabled_Moderno,
+.dxEditors_edtCalendarFNPrevYear_Moderno,
+.dxEditors_edtCalendarFNNextYear_Moderno,
+.dxEditors_edtEllipsis_Moderno,
+.dxEditors_edtEllipsisDisabled_Moderno,
+.dxEditors_edtEllipsisHover_Moderno,
+.dxEditors_edtEllipsisPressed_Moderno,
+.dxEditors_edtDropDown_Moderno,
+.dxEditors_edtDropDownDisabled_Moderno,
+.dxEditors_edtSpinEditIncrementImage_Moderno,
+.dxEditors_edtSpinEditIncrementImageDisabled_Moderno,
+.dxEditors_edtSpinEditDecrementImage_Moderno,
+.dxEditors_edtSpinEditDecrementImageDisabled_Moderno,
+.dxEditors_edtSpinEditLargeIncImage_Moderno,
+.dxEditors_edtSpinEditLargeIncImageDisabled_Moderno,
+.dxEditors_edtSpinEditLargeDecImage_Moderno,
+.dxEditors_edtSpinEditLargeDecImageDisabled_Moderno
+{
+	display:block;
+	margin:auto;
+}
+.dxEditors_edtCalendarFNPrevYear_Moderno
+{
+    margin-right: 8px;
+}
+.dxEditors_edtCalendarFNNextYear_Moderno
+{
+    margin-left: 8px;
+}
+

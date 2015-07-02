@@ -1,0 +1,44 @@
+.dxsplControl_Moderno .dxmLiteReportToolbarPane {
+    color: #2B2B2B;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.dxsplControl_Moderno .dxSplReportToolbarHSep {
+    display: none;
+}
+
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxmtb.dxm-horizontal .dxm-separator {
+    margin: 1px 0 2px;
+}
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxmtb.dxm-horizontal .dxm-item {
+    margin: 1px 0 0;
+}
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxmtb.dxm-horizontal .dxtb-comboBoxMenuItem,
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxmtb.dxm-horizontal .dxtb-labelMenuItem {
+    margin: 0;
+}
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxm-horizontal.dxmtb .dxtb-comboBoxMenuItem {
+    padding: 0 4px 0 2px!important;
+}
+.dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxm-horizontal.dxmtb .dxtb-labelMenuItem {
+	padding: 7px 4px 0!important;
+    padding: 6px 4px 0\0!important;
+}
+@-moz-document url-prefix() {
+    .dxsplControl_Moderno .dxmLiteReportToolbarPane .dxmLite_Moderno .dxm-horizontal.dxmtb .dxtb-labelMenuItem {
+	    padding: 6px 4px 0!important;
+    }
+}
+
+table.dxXtraReports_PageTable_Moderno {
+    border-spacing: 0px;
+    margin: 0 auto;
+}
+
+    table.dxXtraReports_PageTable_Moderno td {
+        padding: 0px;
+    }
+

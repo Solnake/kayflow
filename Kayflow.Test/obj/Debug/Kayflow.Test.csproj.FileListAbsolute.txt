@@ -1,0 +1,15 @@
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Test.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Test.pdb
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Framework.SqlDataAccess.Model.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Model.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Model.pdb
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\obj\Debug\Kayflow.Test.csprojResolveAssemblyReference.cache
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\obj\Debug\Kayflow.Test.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\obj\Debug\Kayflow.Test.pdb
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Test.dll.config
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Framework.SqlDataAccess.Controller.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Framework.SqlDataAccess.Manager.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Controller.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Manager.dll
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Controller.pdb
+D:\Projects\Kailas\Kayflow\Source\Kayflow.Test\bin\Debug\Kayflow.Manager.pdb

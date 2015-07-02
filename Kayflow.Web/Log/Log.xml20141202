@@ -1,0 +1,71 @@
+<log4j:event logger="ASP.global_asax" timestamp="1417548689938" level="ERROR" thread="10"><log4j:message>Unhandled Exception with request (ReturnUrl=%2fKayflow%2fdefault.aspx);</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-1-130620222807893016" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\СИСТЕМА" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable><![CDATA[System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> System.ArgumentException: Ключевое слово не поддерживается: "trusted connection".
+   в System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   в System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   в System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   в System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   в System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   в System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   в Framework.SqlDataAccess.Controller.StoredProcedure.set_ConnectionString(String value)
+   в Framework.SqlDataAccess.Controller.CommonDALCBaseEx.set_Transaction(SqlTransaction value)
+   в Framework.SqlDataAccess.Controller.BaseControllerFactory.CreateController[T](String key, AbstractModel model, SqlTransaction transaction)
+   в Framework.SqlDataAccess.Controller.BaseControllerFactory.CreateController[T](String key)
+   в Framework.SqlDataAccess.Manager.Factory.Controller[T]()
+   в Framework.SqlDataAccess.Manager.TypedManager`2..ctor()
+   в Framework.SqlDataAccess.Manager.ManagerBase`2..ctor()
+   в Kayflow.Manager.KayflowManager`2..ctor()
+   в Kayflow.Manager.EmployeeManager..ctor()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance[T]()
+   в Framework.SqlDataAccess.Manager.BaseManagerFactory.CreateManager[T](String key)
+   в Framework.SqlDataAccess.Manager.Factory.Manager[T]()
+   в BasePage.CreateManager[M]() в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\App_Code\BasePage.cs:строка 85
+   в BaseControl.CreateManager[M]() в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\App_Code\BaseControl.cs:строка 82
+   в Controls_LoginControl.clbkSave_OnCallback(Object source, CallbackEventArgs e) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\LoginControl.ascx.cs:строка 23
+   в DevExpress.Web.ASPxCallback.ASPxCallback.RaiseCallbackEvent(String eventArgument)
+   в DevExpress.Web.ASPxClasses.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]]></log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="45" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417548714322" level="ERROR" thread="9"><log4j:message>Unhandled Exception with request (ReturnUrl=%2fKayflow%2fdefault.aspx);</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-1-130620222807893016" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\СИСТЕМА" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable><![CDATA[System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> System.ArgumentException: Ключевое слово не поддерживается: "trusted connection".
+   в System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   в System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   в System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   в System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   в System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   в System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   в Framework.SqlDataAccess.Controller.StoredProcedure.set_ConnectionString(String value)
+   в Framework.SqlDataAccess.Controller.CommonDALCBaseEx.set_Transaction(SqlTransaction value)
+   в Framework.SqlDataAccess.Controller.BaseControllerFactory.CreateController[T](String key, AbstractModel model, SqlTransaction transaction)
+   в Framework.SqlDataAccess.Controller.BaseControllerFactory.CreateController[T](String key)
+   в Framework.SqlDataAccess.Manager.Factory.Controller[T]()
+   в Framework.SqlDataAccess.Manager.TypedManager`2..ctor()
+   в Framework.SqlDataAccess.Manager.ManagerBase`2..ctor()
+   в Kayflow.Manager.KayflowManager`2..ctor()
+   в Kayflow.Manager.EmployeeManager..ctor()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance[T]()
+   в Framework.SqlDataAccess.Manager.BaseManagerFactory.CreateManager[T](String key)
+   в Framework.SqlDataAccess.Manager.Factory.Manager[T]()
+   в BasePage.CreateManager[M]() в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\App_Code\BasePage.cs:строка 85
+   в BaseControl.CreateManager[M]() в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\App_Code\BaseControl.cs:строка 82
+   в Controls_LoginControl.clbkSave_OnCallback(Object source, CallbackEventArgs e) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\LoginControl.ascx.cs:строка 23
+   в DevExpress.Web.ASPxCallback.ASPxCallback.RaiseCallbackEvent(String eventArgument)
+   в DevExpress.Web.ASPxClasses.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]]></log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="45" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417548894969" level="INFO" thread="18"><log4j:message>Handled InfoException</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-2-130620224898461890" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\СИСТЕМА" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>Kayflow.Controller.CustomException: Користувача з такими даними не існує
+   в Controls_LoginControl.clbkSave_OnCallback(Object source, CallbackEventArgs e) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\LoginControl.ascx.cs:строка 30
+   в DevExpress.Web.ASPxCallback.ASPxCallback.OnCallback(CallbackEventArgs e)
+   в DevExpress.Web.ASPxCallback.ASPxCallback.RaiseCallbackEvent(String eventArgument)
+   в DevExpress.Web.ASPxClasses.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="40" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417551058058" level="INFO" thread="12"><log4j:message>Handled InfoException</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-2-130620246512641686" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\СИСТЕМА" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>Kayflow.Controller.CustomException: Користувача з такими даними не існує
+   в Controls_LoginControl.clbkSave_OnCallback(Object source, CallbackEventArgs e) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\LoginControl.ascx.cs:строка 30
+   в DevExpress.Web.ASPxCallback.ASPxCallback.RaiseCallbackEvent(String eventArgument)
+   в DevExpress.Web.ASPxClasses.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="40" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417551060067" level="INFO" thread="29"><log4j:message>Handled InfoException</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-2-130620246512641686" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\СИСТЕМА" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>Kayflow.Controller.CustomException: Користувача з такими даними не існує
+   в Controls_LoginControl.clbkSave_OnCallback(Object source, CallbackEventArgs e) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\LoginControl.ascx.cs:строка 30
+   в DevExpress.Web.ASPxCallback.ASPxCallback.RaiseCallbackEvent(String eventArgument)
+   в DevExpress.Web.ASPxClasses.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="40" /></log4j:event>

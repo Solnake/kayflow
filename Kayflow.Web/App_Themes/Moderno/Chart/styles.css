@@ -1,0 +1,167 @@
+/* -- WebChartControl -- */
+.dxchartsuiLoadingDiv_Moderno
+{
+	background-color:Gray;	
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxchartsuiLoadingPanel_Moderno
+{
+	font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+	color: #2B2B2B;
+	background-color: White;
+	border: 1px solid #cfcfcf;
+
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+}
+.dxchartsuiLoadingPanel_Moderno td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 15px 34px 15px 20px;
+}
+
+/* -- Crosshair -- */
+.dxchartsuiCrosshairHLine_Moderno,
+.dxchartsuiCrosshairVLine_Moderno
+{
+    background-color: transparent;
+    border-color: #de39cd;
+}
+
+.dxchartsuiCrosshairLabel_Moderno,
+.dxchartsuiCrosshairHLine_Moderno,
+.dxchartsuiCrosshairVLine_Moderno
+{
+    position: absolute;
+    z-index: 41998;
+}
+
+.dxchartsuiCrosshairLabel_Moderno
+{
+    background-color: #de39cd;
+    color: White;
+	font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+	padding: 1px 4px 1px 4px;
+    white-space: nowrap;    
+}
+
+.dxchartsuiCrosshairHLine_Moderno
+{
+    height: 0px;
+}
+
+.dxchartsuiCrosshairVLine_Moderno
+{
+    width: 0px;
+}
+
+/* -- Tooltip -- */
+.dxchartsuiTooltip_Moderno,
+.dxchartsuiTooltip_TopLeft_Moderno,
+.dxchartsuiTooltip_TopRight_Moderno,
+.dxchartsuiTooltip_BottomLeft_Moderno,
+.dxchartsuiTooltip_BottomRight_Moderno
+{
+	font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+    color: #201f35;
+	color: #000000\9;
+	
+    background-color: #ECF4FE;
+	border: 1px Solid rgb(139, 182, 239);
+	border: 1px solid rgba(0, 0, 0, 0.35);
+	padding: 6px 10px 6px 10px;
+	text-align: left;
+    position: absolute;
+    cursor: default;
+    white-space: nowrap;
+    -moz-box-shadow:    0px 2px 10px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
+    box-shadow:         0px 2px 10px rgba(0, 0, 0, 0.35);
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    z-index: 41999;
+}
+.dxchartsuiTooltip_TopLeft_Moderno:before,
+.dxchartsuiTooltip_TopRight_Moderno:before,
+.dxchartsuiTooltip_BottomLeft_Moderno:before,
+.dxchartsuiTooltip_BottomRight_Moderno:before,
+.dxchartsuiTooltip_TopLeft_Moderno:after,
+.dxchartsuiTooltip_TopRight_Moderno:after,
+.dxchartsuiTooltip_BottomLeft_Moderno:after,
+.dxchartsuiTooltip_BottomRight_Moderno:after
+{
+    border-style: solid;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+}
+.dxchartsuiTooltip_TopLeft_Moderno:before,
+.dxchartsuiTooltip_TopRight_Moderno:before,
+.dxchartsuiTooltip_BottomLeft_Moderno:before,
+.dxchartsuiTooltip_BottomRight_Moderno:before
+{
+    border-width: 10px 5px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.dxchartsuiTooltip_TopLeft_Moderno:after,
+.dxchartsuiTooltip_TopRight_Moderno:after,
+.dxchartsuiTooltip_BottomLeft_Moderno:after,
+.dxchartsuiTooltip_BottomRight_Moderno:after
+{
+    border-width: 8px 4px;
+}
+.dxchartsuiTooltip_TopLeft_Moderno:before
+{
+    border-color: transparent transparent rgba(139, 139, 139, 0.35) rgba(139, 139, 139, 0.35);
+    top: -20px;
+    left: 10px;
+}
+.dxchartsuiTooltip_TopLeft_Moderno:after
+{
+    border-color: transparent transparent White White;
+    top: -16px;
+    left: 11px;
+}
+.dxchartsuiTooltip_TopRight_Moderno:before
+{
+    border-color: transparent rgba(139, 139, 139, 0.35) rgba(139, 139, 139, 0.35) transparent;
+    top: -20px;
+    right: 10px;
+}
+.dxchartsuiTooltip_TopRight_Moderno:after
+{
+    border-color: transparent White White transparent;
+    top: -16px;
+    right: 11px;
+}
+.dxchartsuiTooltip_BottomRight_Moderno:before
+{
+    border-color: rgba(139, 139, 139, 0.35) rgba(139, 139, 139, 0.35) transparent transparent;
+    bottom: -20px;
+    right: 10px;
+}
+.dxchartsuiTooltip_BottomRight_Moderno:after
+{
+    border-color: White White transparent transparent;
+    bottom: -16px;
+    right: 11px;
+}
+.dxchartsuiTooltip_BottomLeft_Moderno:before
+{
+    border-color: rgba(139, 139, 139, 0.35) transparent transparent rgba(139, 139, 139, 0.35);
+    bottom: -20px;
+    left: 10px;
+}
+.dxchartsuiTooltip_BottomLeft_Moderno:after
+{
+    border-color: White transparent transparent White;
+    bottom: -16px;
+    left: 11px;
+}
+

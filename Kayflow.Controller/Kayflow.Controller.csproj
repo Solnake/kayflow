@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kayflow.Controller</RootNamespace>
+    <AssemblyName>Kayflow.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.SqlDataAccess.Controller">
+      <HintPath>..\DLL\Framework.SqlDataAccess.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Model">
+      <HintPath>..\DLL\Framework.SqlDataAccess.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Act\ActHistoryController.cs" />
+    <Compile Include="Dictionary\OfficeTerritorialUnitController.cs" />
+    <Compile Include="Settings\ActActionController.cs" />
+    <Compile Include="Act\ActController.cs" />
+    <Compile Include="Act\ActDocumentController.cs" />
+    <Compile Include="Act\NoteController.cs" />
+    <Compile Include="Act\StateHistoryController.cs" />
+    <Compile Include="Act\StepController.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="CustomException.cs" />
+    <Compile Include="Dictionary\CategoryController.cs" />
+    <Compile Include="Dictionary\CostController.cs" />
+    <Compile Include="Dictionary\StateController.cs" />
+    <Compile Include="Dictionary\TerritorialUnitController.cs" />
+    <Compile Include="Expense\ExpenseController.cs" />
+    <Compile Include="Expense\ExpenseCostController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ActListSettingController.cs" />
+    <Compile Include="Settings\DocumentController.cs" />
+    <Compile Include="Settings\DocumentGroupController.cs" />
+    <Compile Include="Settings\DocumentValueController.cs" />
+    <Compile Include="Settings\LayoutController.cs" />
+    <Compile Include="Settings\PaymentDataSettingsController.cs" />
+    <Compile Include="Settings\ValueSetController.cs" />
+    <Compile Include="Staff\EmployeeController.cs" />
+    <Compile Include="Staff\EmployeeOfficesController.cs" />
+    <Compile Include="Staff\OfficeController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kayflow.Model\Kayflow.Model.csproj">
+      <Project>{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}</Project>
+      <Name>Kayflow.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

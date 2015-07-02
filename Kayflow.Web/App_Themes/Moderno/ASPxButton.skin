@@ -1,0 +1,32 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" SkinID="Add">
+<Image IconID="actions_add_16x16"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" RenderMode="Link" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" Width="32px" Height="32px" SkinID="Edit">
+<Image IconID="edit_edit_32x32"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" RenderMode="Link" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" Width="32px" Height="32px" SkinID="Delete">
+<Image IconID="edit_delete_32x32"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" SkinID="Cancel">
+<Image IconID="actions_cancel_16x16"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" SkinID="Save">
+<Image IconID="actions_apply_16x16"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" SkinID="Customize">
+<Image IconID="edit_customization_16x16"></Image>
+</dx:ASPxButton>
+
+<dx:ASPxButton runat="server" AutoPostBack="False" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" SkinID="EditButton">
+<Image IconID="edit_edit_16x16"></Image>
+</dx:ASPxButton>

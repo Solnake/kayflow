@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kayflow.Manager</RootNamespace>
+    <AssemblyName>Kayflow.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.SqlDataAccess.Controller">
+      <HintPath>..\DLL\Framework.SqlDataAccess.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Manager">
+      <HintPath>..\DLL\Framework.SqlDataAccess.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Model">
+      <HintPath>..\DLL\Framework.SqlDataAccess.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Act\ActHistoryManager.cs" />
+    <Compile Include="Dictionary\OfficeTerritorialUnitManager.cs" />
+    <Compile Include="ImportExport\ImportExportManager.cs" />
+    <Compile Include="Settings\ActActionManager.cs" />
+    <Compile Include="Act\ActDocumentManager.cs" />
+    <Compile Include="Act\ActManager.cs" />
+    <Compile Include="Act\NoteManager.cs" />
+    <Compile Include="Act\StateHistoryManager.cs" />
+    <Compile Include="Act\StepManager.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Dictionary\CategoryManager.cs" />
+    <Compile Include="Dictionary\CostManager.cs" />
+    <Compile Include="Dictionary\StateManager.cs" />
+    <Compile Include="Dictionary\TerritorialUnitManager.cs" />
+    <Compile Include="Expense\ExpenseCostManager.cs" />
+    <Compile Include="Expense\ExpenseManager.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ActListSettingManager.cs" />
+    <Compile Include="Settings\DocumentGroupManager.cs" />
+    <Compile Include="Settings\DocumentManager.cs" />
+    <Compile Include="Settings\DocumentValueManager.cs" />
+    <Compile Include="Settings\LayoutManager.cs" />
+    <Compile Include="Settings\PaymentDataSettingsManager.cs" />
+    <Compile Include="Settings\ValueSetManager.cs" />
+    <Compile Include="Staff\EmployeeManager.cs" />
+    <Compile Include="Staff\EmployeeOfficesManager.cs" />
+    <Compile Include="Staff\OfficeManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kayflow.Controller\Kayflow.Controller.csproj">
+      <Project>{6d6c3e65-750e-4c69-b4a1-19d31f1563cc}</Project>
+      <Name>Kayflow.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kayflow.Model\Kayflow.Model.csproj">
+      <Project>{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}</Project>
+      <Name>Kayflow.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

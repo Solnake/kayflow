@@ -1,0 +1,58 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="Controls/Content/MainMenu.ascx" TagName="MainMenu" TagPrefix="uc" %>
+<%@ Register Src="Controls/Content/UserControl.ascx" TagName="UserControl" TagPrefix="uc" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Кайлас</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMain" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="ExtLibs" />
+                <asp:ScriptReference Name="DialogJs" />
+                <asp:ScriptReference Name="CommonJs" />
+            </Scripts>
+        </asp:ScriptManager>
+        <dx:ASPxLoadingPanel ID="loadingPanelDialog" runat="server" ClientInstanceName="DialogLoadingPanel" Modal="True" />
+        <div class="line_top"></div>
+        <div class="container">
+            <div class="header">
+                <a href="#" class="logo">
+                    <img src='<%=ImagesPath +"logo.png" %>' alt="Кайлас" />
+                </a>
+                <div class="slogan">
+                    <span>ТОВ <span>«Кайлас-К»</span>
+                    </span>
+                    <div class="slogan_mini">
+                        Лiцензована землевпорядна органiзацiя
+                    </div>
+                </div>
+                <div class="header_right">
+                    <uc:UserControl runat="server" ID="ucUserLogin" />
+                </div>
+                <div class="wrapper_menu">
+                    <uc:MainMenu ID="MainMenu1" runat="server" />
+                </div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="cphContent" runat="server" />
+            </div>
+            <div class="h_footer"></div>
+        </div>
+        <div class="footer">
+            <div class="footer_center">
+                <span>ТОВ “Кайлас-К” 2014</span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

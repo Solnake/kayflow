@@ -1,0 +1,63 @@
+<log4j:event logger="ASP.global_asax" timestamp="1417243875406" level="ERROR" thread="74"><log4j:message>Unhandled Exception with request ();</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-4-130617173196967909" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\—»—“≈ћј" /><log4j:data name="log4net:Identity" value="" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>System.Web.HttpUnhandledException (0x80004005): ¬ыдано исключение типа "System.Web.HttpUnhandledException". ---&gt; System.ArgumentNullException: «начение не может быть неопределенным.
+»м€ параметра: source
+   в System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   в ASP.controls_content_mainmenu_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\Content\MainMenu.ascx:строка 14
+   в System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   в System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   в ASP.masterpage_master.__RenderfrmMain(HtmlTextWriter __w, Control parameterContainer) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\MasterPage.master:строка 30
+   в System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   в System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   в System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   в System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   в System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   в System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   в System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   в System.Web.UI.Page.Render(HtmlTextWriter writer)
+   в System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.HandleError(Exception e)
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest()
+   в System.Web.UI.Page.ProcessRequest(HttpContext context)
+   в ASP.login_aspx.ProcessRequest(HttpContext context) в c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\kayflow\48ec953b\56a285e7\App_Web_olfoo3l0.4.cs:строка 0
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="45" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417244351005" level="ERROR" thread="73"><log4j:message>Unhandled Exception with request (IsLogOut=true);</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-5-130617176484601063" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\—»—“≈ћј" /><log4j:data name="log4net:Identity" value="517a156a-dec7-4e6e-86fb-9ffe661aaf34" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>System.Web.HttpUnhandledException (0x80004005): ¬ыдано исключение типа "System.Web.HttpUnhandledException". ---&gt; System.ArgumentNullException: «начение не может быть неопределенным.
+»м€ параметра: source
+   в System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   в Controls_Content_MainMenu.DoInitialize(Object data, Boolean loadData) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\Content\MainMenu.ascx.cs:строка 11
+   в WebSiteFramework.CustomUserControlBase.Initialize(Object data, Boolean loadData)
+   в WebSiteFramework.CustomUserControlBase.OnLoad(EventArgs e)
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.HandleError(Exception e)
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest()
+   в System.Web.UI.Page.ProcessRequest(HttpContext context)
+   в ASP.login_aspx.ProcessRequest(HttpContext context) в c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\kayflow\48ec953b\56a285e7\App_Web_ahaehjqg.4.cs:строка 0
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="45" /></log4j:event>
+<log4j:event logger="ASP.global_asax" timestamp="1417244475395" level="ERROR" thread="63"><log4j:message>Unhandled Exception with request (IsLogOut=true);</log4j:message><log4j:properties><log4j:data name="log4jmachinename" value="SweetHome" /><log4j:data name="log4japp" value="/LM/W3SVC/1/ROOT/Kayflow-5-130617176484601063" /><log4j:data name="log4net:UserName" value="NT AUTHORITY\—»—“≈ћј" /><log4j:data name="log4net:Identity" value="517a156a-dec7-4e6e-86fb-9ffe661aaf34" /><log4j:data name="log4net:HostName" value="SweetHome" /></log4j:properties><log4j:throwable>System.Web.HttpUnhandledException (0x80004005): ¬ыдано исключение типа "System.Web.HttpUnhandledException". ---&gt; System.ArgumentNullException: «начение не может быть неопределенным.
+»м€ параметра: source
+   в System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   в Controls_Content_MainMenu.DoInitialize(Object data, Boolean loadData) в d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Controls\Content\MainMenu.ascx.cs:строка 11
+   в WebSiteFramework.CustomUserControlBase.Initialize(Object data, Boolean loadData)
+   в WebSiteFramework.CustomUserControlBase.OnLoad(EventArgs e)
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Control.LoadRecursive()
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.HandleError(Exception e)
+   в System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   в System.Web.UI.Page.ProcessRequest()
+   в System.Web.UI.Page.ProcessRequest(HttpContext context)
+   в ASP.login_aspx.ProcessRequest(HttpContext context) в c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\kayflow\48ec953b\56a285e7\App_Web_ahaehjqg.4.cs:строка 0
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)</log4j:throwable><log4j:locationInfo class="ASP.global_asax" method="Application_Error" file="d:\Projects\Kailas\Kayflow\Source\Kayflow.Web\Global.asax" line="45" /></log4j:event>

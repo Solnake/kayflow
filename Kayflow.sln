@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow.Model", "Kayflow.Model\Kayflow.Model.csproj", "{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow.Controller", "Kayflow.Controller\Kayflow.Controller.csproj", "{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow.Manager", "Kayflow.Manager\Kayflow.Manager.csproj", "{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kayflow", "http://localhost/Kayflow", "{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{3d08a0d4-d3a1-40c8-bc0a-4af37083566c}|Kayflow.Manager.dll;{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}|Kayflow.Controller.dll;{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}|Kayflow.Model.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Kayflow"
+		Debug.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Kayflow\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Kayflow"
+		Release.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Kayflow\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Kayflow.Web\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow.Test", "Kayflow.Test\Kayflow.Test.csproj", "{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow", "Kayflow\Kayflow.csproj", "{E54DAC31-6346-4F4C-959D-E72C039ADE80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}.Release|x86.ActiveCfg = Release|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D08A0D4-D3A1-40C8-BC0A-4AF37083566C}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DA965EF-D89E-41DB-9EEF-1E14B9577BF8}.Release|x86.ActiveCfg = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AA4E7EE6-F14F-4FDB-B054-4D31A4E7177F}.Release|x86.ActiveCfg = Release|Any CPU
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Debug|x86.ActiveCfg = Debug|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Debug|x86.Build.0 = Debug|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|Any CPU.ActiveCfg = Release|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|x86.ActiveCfg = Release|x86
+		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
