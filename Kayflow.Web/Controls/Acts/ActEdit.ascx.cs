@@ -82,7 +82,6 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
 
     protected override void DoInitialize_2_LoadDataInitControls()
     {
-        //est
         base.DoInitialize_2_LoadDataInitControls();
         InitCombo<EmployeeManager>(ddlEmployees, e0Type.PlsSelect);
         InitCombo(ddlTerritorialUnits,
