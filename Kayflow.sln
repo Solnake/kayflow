@@ -17,21 +17,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kayflow.Web", "http://local
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{3d08a0d4-d3a1-40c8-bc0a-4af37083566c}|Kayflow.Manager.dll;{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}|Kayflow.Controller.dll;{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}|Kayflow.Model.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_1815"
-		Debug.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Debug.AspNetCompiler.PhysicalPath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1815\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_1815"
-		Release.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Release.AspNetCompiler.PhysicalPath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1815\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "Kayflow.Web\"
+		SlnRelativePath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
 	EndProjectSection
 EndProject
 Global

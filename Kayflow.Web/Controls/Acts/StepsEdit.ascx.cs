@@ -29,7 +29,7 @@ public partial class Controls_Acts_StepsEdit : BaseEditControl<StepManager, Step
     protected override void DoInitialize_2_LoadDataInitControls()
     {
         base.DoInitialize_2_LoadDataInitControls();
-        InitCombo<StateManager>(ddlStatus, e0Type.PlsSelect);
+        InitCombo<Kayflow.Manager.StateManager>(ddlStatus, e0Type.PlsSelect);
     }
 
     protected override void DoInitialize_3_LoadDataMain()

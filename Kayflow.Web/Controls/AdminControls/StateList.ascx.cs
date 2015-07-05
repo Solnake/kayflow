@@ -3,7 +3,7 @@ using Kayflow.Controller;
 using Kayflow.Manager;
 using Kayflow.Model;
 
-public partial class Controls_AdminControls_StateList : BaseListControl<StateManager, StateController, State>
+public partial class Controls_AdminControls_StateList : BaseListControl<Kayflow.Manager.StateManager, StateController, State>
 {
     public override ASPxGridView GridView
     {

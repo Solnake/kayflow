@@ -3,7 +3,7 @@ using Kayflow.Controller;
 using Kayflow.Manager;
 using Kayflow.Model;
 
-public partial class Controls_AdminControls_StateEdit : BaseEditControl<StateManager, StateController, State>
+public partial class Controls_AdminControls_StateEdit : BaseEditControl<Kayflow.Manager.StateManager, StateController, State>
 {
     protected override ASPxCallback GetCallbackControl()
     {
