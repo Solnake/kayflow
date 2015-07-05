@@ -1,7 +1,0 @@
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\bin\Release\Kayflow.Model.dll
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\bin\Release\Kayflow.Model.pdb
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\bin\Release\Framework.SqlDataAccess.Model.dll
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\bin\Release\Framework.SqlDataAccess.Model.pdb
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\obj\Release\Kayflow.Model.csprojResolveAssemblyReference.cache
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\obj\Release\Kayflow.Model.dll
-D:\Projects\Kailas\Kayflow\Source\Kayflow.Model\obj\Release\Kayflow.Model.pdb

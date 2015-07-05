@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E54DAC31-6346-4F4C-959D-E72C039ADE80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kayflow</RootNamespace>
+    <AssemblyName>Kayflow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\document_certificate.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2.Wizard, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.2.UI, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2.Extensions, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2.UI, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Controller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Framework.SqlDataAccess.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Manager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Framework.SqlDataAccess.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.SqlDataAccess.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Framework.SqlDataAccess.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acts\frmActEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmActEdit.Designer.cs">
+      <DependentUpon>frmActEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmActList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmActList.Designer.cs">
+      <DependentUpon>frmActList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmActListClosed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmActListClosed.Designer.cs">
+      <DependentUpon>frmActListClosed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmActListMy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmActListMy.Designer.cs">
+      <DependentUpon>frmActListMy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmNoteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmNoteEdit.Designer.cs">
+      <DependentUpon>frmNoteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmStateHistoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmStateHistoryEdit.Designer.cs">
+      <DependentUpon>frmStateHistoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acts\frmStepsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acts\frmStepsEdit.Designer.cs">
+      <DependentUpon>frmStepsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BaseMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\CustomFocusHelper.cs" />
+    <Compile Include="App_Code\FormFactory.cs" />
+    <Compile Include="App_Code\ICurrentInfo.cs" />
+    <Compile Include="App_Code\IDefaultRibbonPage.cs" />
+    <Compile Include="App_Code\LoginContext.cs" />
+    <Compile Include="App_Code\MyRibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App_Code\RefreshHelperClass.cs" />
+    <Compile Include="Dictionary\frmCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmCategoryEdit.Designer.cs">
+      <DependentUpon>frmCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmCategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmCategoryList.Designer.cs">
+      <DependentUpon>frmCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmCostEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmCostEdit.Designer.cs">
+      <DependentUpon>frmCostEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmCostList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmCostList.Designer.cs">
+      <DependentUpon>frmCostList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmStateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmStateEdit.Designer.cs">
+      <DependentUpon>frmStateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmStateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmStateList.Designer.cs">
+      <DependentUpon>frmStateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitEdit.Designer.cs">
+      <DependentUpon>frmTerritorialUnitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitFind.Designer.cs">
+      <DependentUpon>frmTerritorialUnitFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\frmTerritorialUnitList.Designer.cs">
+      <DependentUpon>frmTerritorialUnitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\frmExpenseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\frmExpenseEdit.Designer.cs">
+      <DependentUpon>frmExpenseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\frmExpenseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\frmExpenseList.Designer.cs">
+      <DependentUpon>frmExpenseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainForm.Designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ActCollection.cs" />
+    <Compile Include="Reports\ActForReport.cs" />
+    <Compile Include="Reports\ActMainReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ActMainReport.Designer.cs">
+      <DependentUpon>ActMainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DocumentCollection.cs" />
+    <Compile Include="Reports\StepReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StepReport.Designer.cs">
+      <DependentUpon>StepReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ObjectExt.cs" />
+    <Compile Include="Reports\StepCollection.cs" />
+    <Compile Include="Reports\StepForReport.cs" />
+    <Compile Include="Settings\frmActActionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmActActionEdit.Designer.cs">
+      <DependentUpon>frmActActionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmActActionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmActActionList.Designer.cs">
+      <DependentUpon>frmActActionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmDocumentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmDocumentEdit.Designer.cs">
+      <DependentUpon>frmDocumentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmDocumentGroupEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmDocumentGroupEdit.Designer.cs">
+      <DependentUpon>frmDocumentGroupEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmDocumentGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmDocumentGroupList.Designer.cs">
+      <DependentUpon>frmDocumentGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmDocumentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmDocumentList.Designer.cs">
+      <DependentUpon>frmDocumentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmPaymentDataSettingsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmPaymentDataSettingsList.Designer.cs">
+      <DependentUpon>frmPaymentDataSettingsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmEmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmEmployeeEdit.Designer.cs">
+      <DependentUpon>frmEmployeeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmEmployeeList.Designer.cs">
+      <DependentUpon>frmEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmOfficeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmOfficeEdit.Designer.cs">
+      <DependentUpon>frmOfficeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmOfficeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmOfficeList.Designer.cs">
+      <DependentUpon>frmOfficeList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acts\frmActEdit.resx">
+      <DependentUpon>frmActEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acts\frmActList.resx">
+      <DependentUpon>frmActList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acts\frmNoteEdit.resx">
+      <DependentUpon>frmNoteEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acts\frmStateHistoryEdit.resx">
+      <DependentUpon>frmStateHistoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acts\frmStepsEdit.resx">
+      <DependentUpon>frmStepsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Code\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Code\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmCategoryEdit.resx">
+      <DependentUpon>frmCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmCategoryList.resx">
+      <DependentUpon>frmCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmCostEdit.resx">
+      <DependentUpon>frmCostEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmCostList.resx">
+      <DependentUpon>frmCostList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmStateEdit.resx">
+      <DependentUpon>frmStateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmStateList.resx">
+      <DependentUpon>frmStateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmTerritorialUnitEdit.resx">
+      <DependentUpon>frmTerritorialUnitEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmTerritorialUnitFind.resx">
+      <DependentUpon>frmTerritorialUnitFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\frmTerritorialUnitList.resx">
+      <DependentUpon>frmTerritorialUnitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\frmExpenseEdit.resx">
+      <DependentUpon>frmExpenseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\frmExpenseList.resx">
+      <DependentUpon>frmExpenseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainForm.resx">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ActMainReport.resx">
+      <DependentUpon>ActMainReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StepReport.resx">
+      <DependentUpon>StepReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmActActionEdit.resx">
+      <DependentUpon>frmActActionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmActActionList.resx">
+      <DependentUpon>frmActActionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmDocumentEdit.resx">
+      <DependentUpon>frmDocumentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmDocumentGroupEdit.resx">
+      <DependentUpon>frmDocumentGroupEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmDocumentGroupList.resx">
+      <DependentUpon>frmDocumentGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmDocumentList.resx">
+      <DependentUpon>frmDocumentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmPaymentDataSettingsList.resx">
+      <DependentUpon>frmPaymentDataSettingsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmEmployeeEdit.resx">
+      <DependentUpon>frmEmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmEmployeeList.resx">
+      <DependentUpon>frmEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmOfficeEdit.resx">
+      <DependentUpon>frmOfficeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmOfficeList.resx">
+      <DependentUpon>frmOfficeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config.Debug">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config.Release">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kayflow.Controller\Kayflow.Controller.csproj">
+      <Project>{6d6c3e65-750e-4c69-b4a1-19d31f1563cc}</Project>
+      <Name>Kayflow.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kayflow.Manager\Kayflow.Manager.csproj">
+      <Project>{3d08a0d4-d3a1-40c8-bc0a-4af37083566c}</Project>
+      <Name>Kayflow.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kayflow.Model\Kayflow.Model.csproj">
+      <Project>{1fdbda20-b6ba-4f71-818f-bded0d84195c}</Project>
+      <Name>Kayflow.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_b_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_sheet_add_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_write_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_folder_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relation_config_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_certificate.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lamp_add_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import_dis.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy $(ProjectDir)App.config.$(ConfigurationName) $(ProjectDir)App.config</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
