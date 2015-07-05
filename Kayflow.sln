@@ -13,26 +13,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow.Test", "Kayflow.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayflow", "Kayflow\Kayflow.csproj", "{E54DAC31-6346-4F4C-959D-E72C039ADE80}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kayflow.Web", "http://localhost:1815", "{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kyflow", "http://localhost/Kyflow", "{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}"
 	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
+		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{3d08a0d4-d3a1-40c8-bc0a-4af37083566c}|Kayflow.Manager.dll;{6D6C3E65-750E-4C69-B4A1-19D31F1563CC}|Kayflow.Controller.dll;{1FDBDA20-B6BA-4F71-818F-BDED0D84195C}|Kayflow.Model.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1815"
-		Debug.AspNetCompiler.PhysicalPath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1815\"
+		Debug.AspNetCompiler.VirtualPath = "/Kyflow"
+		Debug.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Kyflow\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1815"
-		Release.AspNetCompiler.PhysicalPath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1815\"
+		Release.AspNetCompiler.VirtualPath = "/Kyflow"
+		Release.AspNetCompiler.PhysicalPath = "Kayflow.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Kyflow\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "\\psf\Projects\Kailas\Kayflow\Source\Kayflow.Web\"
+		SlnRelativePath = "Kayflow.Web\"
 	EndProjectSection
 EndProject
 Global
@@ -95,16 +94,16 @@ Global
 		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|x86.ActiveCfg = Release|x86
 		{E54DAC31-6346-4F4C-959D-E72C039ADE80}.Release|x86.Build.0 = Release|x86
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{4C11A170-1E1A-42BE-8B4B-2EC34C4F9B35}.Release|x86.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{12C2DD44-5520-4F77-BD4F-53FCF87DF42E}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
