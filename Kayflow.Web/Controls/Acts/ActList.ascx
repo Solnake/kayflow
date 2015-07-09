@@ -46,7 +46,7 @@
         </DataItem>
     </Templates>
     <Settings ShowFilterRow="True"></Settings>
-    <SettingsBehavior AllowDragDrop="True"></SettingsBehavior>
+    <SettingsBehavior AllowDragDrop="True" ColumnResizeMode="Control"></SettingsBehavior>
     <SettingsCookies Enabled="True" CookiesID="ActList" StoreColumnsVisiblePosition="False" StoreFiltering="True" />
 </dx:ASPxGridView>
 <script type="text/javascript">

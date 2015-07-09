@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+п»ї<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <%@ Register Src="Controls/Content/MainMenu.ascx" TagName="MainMenu" TagPrefix="uc" %>
 <%@ Register Src="Controls/Content/UserControl.ascx" TagName="UserControl" TagPrefix="uc" %>
@@ -7,13 +7,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Кайлас</title>
+    <title>РљР°Р№Р»Р°СЃ</title>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="frmMain" runat="server">
+    <form id="frmMain" runat="server" enctype="multipart/form-data" style="width: 100%; height: 100%;">
+        <script type="text/javascript">
+            
+        </script>
         <asp:ScriptManager runat="server">
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
@@ -27,13 +30,13 @@
         <div class="container">
             <div class="header">
                 <a href="#" class="logo">
-                    <img src='<%=ImagesPath +"logo.png" %>' alt="Кайлас" />
+                    <img src='<%=ImagesPath +"logo.png" %>' alt="РљР°Р№Р»Р°СЃ" />
                 </a>
                 <div class="slogan">
-                    <span>ТОВ <span>«Кайлас-К»</span>
+                    <span>РўРћР’ <span>В«РљР°Р№Р»Р°СЃ-РљВ»</span>
                     </span>
                     <div class="slogan_mini">
-                        Лiцензована землевпорядна органiзацiя
+                        Р›iС†РµРЅР·РѕРІР°РЅР° Р·РµРјР»РµРІРїРѕСЂСЏРґРЅР° РѕСЂРіР°РЅiР·Р°С†iСЏ
                     </div>
                 </div>
                 <div class="header_right">
@@ -50,9 +53,17 @@
         </div>
         <div class="footer">
             <div class="footer_center">
-                <span>ТОВ “Кайлас-К” 2014</span>
+                <span>РўРћР’ вЂњРљР°Р№Р»Р°СЃ-РљвЂќ 2014</span>
             </div>
         </div>
+        <script type="text/javascript">
+            if (typeof ASPxClientGridView !== 'undefined') {
+                ASPxClientGridView.prototype.DeleteGridRow = function (index) {
+                    if ('Р’Рё РґС–Р№СЃРЅРѕ Р±Р°Р¶Р°С”С‚Рµ РІРёРґР°Р»РёС‚Рё Р·Р°РїРёСЃ?')
+                        this.DeleteRow(index);
+                };
+            }
+        </script>
     </form>
 </body>
 </html>

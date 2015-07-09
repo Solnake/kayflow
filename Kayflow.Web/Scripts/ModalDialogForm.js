@@ -7,7 +7,7 @@ function DialogForm_ShowFrame(headerText, view, qs, event, w, h, dialogLoadingPa
         w = w ? w : DialogForm_GetWidth(view);
         h = h ? h : DialogForm_GetHeight(view);
         var _window = popGetParentWindow();
-        popRemoveParentScroll();
+        popRemoveParentScroll(_window);
         if (dialogLoadingPanel)
             dialogLoadingPanel.Show();
         var _src = 'PopUpPage.aspx?view=' + view;
@@ -37,11 +37,12 @@ function DialogForm_ShowFrame(headerText, view, qs, event, w, h, dialogLoadingPa
 }
 
 function popGetFrame(frameid, sourceurl, isIos) {
+    var outpumrk;
     if (isIos) {
-        var outpumrk = $('<div id="div' + frameid + '" style="visibility:hidden; overflow-y: auto; overflow-x: hidden; position:fixed; left:0; top:0; margin:0; padding:0; z-index:99999; width:100%; height:100%; -webkit-overflow-scrolling: touch;"><iframe id="' + frameid + '" style="/*visibility:hidden;*/ border:none; background-color: transparent;" width="100%" height="100%" scrolling="auto" frameborder="0" allowtransparency="true" src="' + sourceurl + '" /></div>');
+        outpumrk = $('<div id="div' + frameid + '" style="background-color: transparent; visibility:hidden; overflow-y: auto; overflow-x: hidden; position:absolute; left:0; top:0; margin:0; padding:0; z-index:999999; width:100%; height:100%; -webkit-overflow-scrolling: touch;  pointer-events:auto;"><iframe id="' + frameid + '" style="/*visibility:hidden;*/ z-index:999999; border:none; background-color: transparent;" width="100%" height="100%" scrolling="auto" frameborder="0" allowtransparency="true" src="' + sourceurl + '" /></div>');
         return { framehtml: outpumrk, frameelement: outpumrk.find("#" + frameid) };
     } else {
-        outpumrk = $('<iframe id="' + frameid + '" style="visibility:hidden; overflow-x: hidden; position:fixed; left:0; top:0; margin:0; padding:0; z-index:99999; border:none; background-color: transparent;" width="100%" height="100%" scrolling="auto" frameborder="0" allowtransparency="true" src="' + sourceurl + '" />');
+        outpumrk = $('<iframe id="' + frameid + '" style="visibility:hidden; overflow-x: hidden; position:fixed; left:0; top:0; margin:0; padding:0; z-index:999999; border:none; background-color: transparent; pointer-events:auto;" width="100%" height="100%" scrolling="auto" frameborder="0" allowtransparency="true" src="' + sourceurl + '" />');
         return { framehtml: outpumrk, frameelement: outpumrk };
     }
 }
@@ -79,11 +80,11 @@ var CloseDialogFrameValue = null;
 
 function CloseDialogFrame(_val) {
     CloseDialogFrameValue = _val;
-    if (__aspxBrowserMajorVersion == 9) {
-        setTimeout(TimeOutCloseDialogFrame, 100);
-    } else {
+    //if (__aspxBrowserMajorVersion == 9) {
+    //    setTimeout(TimeOutCloseDialogFrame, 100);
+    //} else {
         TimeOutCloseDialogFrame();
-    }
+    //}
 }
 
 function TimeOutCloseDialogFrame() {
@@ -140,38 +141,41 @@ function popSetPopupScrollState(frameid) {
     }
 }
 
-function popRemoveParentScroll() {
-    $('body').css('overflow', 'hidden');
-    $('body').css('height', '100%');
-    $('body').css('max-height', '100%');
+function popRemoveParentScroll(_window) {
+    popscrollposition = $(_window).scrollTop();
+    $('html, body').css('overflow', 'hidden');
+    $('html, body').css('height', '100%');
+    $('html, body').css('max-height', '100%');
+    $('html, body').css('pointer-events', 'none');
+    //$('html, body').on('touchstart touchmove', function (e) {
+    //    //prevent native touch activity like scrolling
+    //    alert('asd');
+    //    e.preventDefault();
+    //    e.stopImmediatePropagation();
+    //});
 }
 
+var popscrollposition;
 function popRestoreParentScroll() {
     if (arrStack.length <= 1) {
-        $('body').css('overflow', '');
-        $('body').css('height', '');
-        $('body').css('max-height', '');
+        $('html, body').css('overflow', '');
+        $('html, body').css('height', '');
+        $('html, body').css('max-height', '');
+        $('html, body').css('pointer-events', 'auto');
+        if (popscrollposition != null)
+            $(window).scrollTop(popscrollposition);
     }
 }
 
-function isBrowserMobileIOS() {
+window.isBrowserMobileIOS = function() {
     return (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()));
-}
+};
 
-window.popFixScroll = function (popContentHeight, frameID) {
+window.popFixScroll = function(popContentHeight, frameID) {
     if ($('#' + frameID).height() < popContentHeight)
         $("#" + frameID).attr('scrolling', 'auto');
     else {
         //alert(frameID + ' frame height=' + $('#' + frameID).height() + ' content='+ popContentHeight)
         $("#" + frameID).attr('scrolling', 'no');
     }
-}
-
-function isNullOrEmpty(str) {
-    if (!str)
-        return true;
-    for (var i = 0; i < str.length; i++)
-        if (" " != str.charAt(i))
-            return false;
-    return true;
-}
+};

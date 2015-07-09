@@ -2,9 +2,30 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DevExpress.Web;
 
 public partial class PopUpPage : BasePage
 {
+    protected int PopupWidth
+    {
+        get { return GetRequestParam<int>("wdth", 100); }
+    }
+
+    protected int PopupHeight
+    {
+        get { return GetRequestParam<int>("hght", 100) + 40; }
+    }
+
+    protected int ViewportHeight
+    {
+        get { return GetRequestParam<int>("viewporthght", 100); }
+    }
+
+    protected int ViewportWidth
+    {
+        get { return GetRequestParam<int>("viewportwdth", 100); }
+    }
+
     public override List<Crumb> Breadcrumbs
     {
         get { throw new NotImplementedException(); }
@@ -37,13 +58,13 @@ public partial class PopUpPage : BasePage
     {
         base.Page_Load(sender, e);
         popupControl.HeaderText = GetRequestParam<string>("hdrTitle");
-        if (GetRequestParam<int>("wdth") != 0)
-        {
-            popupControl.Width = Unit.Pixel(GetRequestParam<int>("wdth"));
-        }
-        if (GetRequestParam<int>("hght") != 0)
-        {
-            popupControl.Height = Unit.Pixel(GetRequestParam<int>("hght"));
-        }
+        popupControl.Height = Unit.Pixel(PopupHeight > ViewportHeight ? ViewportHeight : PopupHeight);
+        popupControl.Width = Unit.Pixel(PopupWidth > ViewportWidth ? ViewportWidth : PopupWidth);
+        popupControl.AllowDragging = !Context.Request.Browser.IsMobileDevice;
+    }
+
+    protected void loadingPanelDialog_OnCustomJSProperties(object sender, CustomJSPropertiesEventArgs e)
+    {
+        e.Properties.Add("cpCurrentView", CurrentView);
     }
 }

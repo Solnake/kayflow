@@ -2,6 +2,7 @@
 using Framework.SqlDataAccess.Manager;
 using Framework.SqlDataAccess.Model;
 using System;
+using System.Web;
 using Kayflow.Manager;
 using Kayflow.Model;
 using WebSiteFramework;
@@ -123,6 +124,20 @@ public abstract class BasePage : PageBase
     {
         string v = Request[paramName];
         return GetValueEx<T>(string.IsNullOrEmpty(v) || v == "null" ? null : v);
+    }
+
+    protected T GetRequestParam<T>(string paramName, T defaultValue)
+    {
+        //string v = Request[paramName];
+        var v = HttpContext.Current.Request[paramName] == null ? string.Empty : Request[paramName];
+        return GetValue(string.IsNullOrEmpty(v) ? null : v, defaultValue);
+    }
+
+    protected T GetValue<T>(object source, T defaultValue)
+    {
+        if (source == null)
+            return defaultValue;
+        return GetValueEx<T>(source);
     }
 
     private T GetValueEx<T>(object source)
