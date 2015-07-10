@@ -68,7 +68,7 @@ a:hover{
     padding:0 0 0 24px;
     font-size:12px;
     line-height:20px;
-    color:#fff;
+    color: #fff !important;
 }
 .search{
     width:100%;

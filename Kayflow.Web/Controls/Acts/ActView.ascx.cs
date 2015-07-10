@@ -14,7 +14,7 @@ public partial class Controls_Acts_ActView : BaseControl
     protected override void DoInitialize_3_LoadDataMain()
     {
         base.DoInitialize_3_LoadDataMain();
-        var model = CreateManager<ActManager>().Controller.Get(DocID);
+        var model = CreateManager<ActManager>().Controller.GetByIDEx(CurrentOffice.OfficeID, DocID);
         if (model == null)
             return;
         ShowTitle(string.Format("Справа від {0:d} ({1})", model.MeteringDate, model.EmployeeName));

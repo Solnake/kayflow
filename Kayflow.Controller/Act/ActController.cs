@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Framework.SqlDataAccess.Controller;
 using Kayflow.Model;
 
@@ -20,7 +22,7 @@ namespace Kayflow.Controller
         {
             get
             {
-                return @"select * from f_acts() ";
+                return @"select * from v_Acts ";
             }
         }        
 
@@ -33,6 +35,30 @@ namespace Kayflow.Controller
         }
         
         #endregion
+
+        public List<Act> GetByOfficeEx(Guid pOfficeId)
+        {
+            StProcedure.ProcedureName = "Acts_GetAll";
+            StProcedure["@OfficeID"].Value = pOfficeId;
+            return StProcedure.ExecuteListAttr<Act>();
+        }
+
+        public Act GetByIDEx(Guid pOfficeId, Guid pActId)
+        {
+            StProcedure.ProcedureName = "Acts_GetAll";
+            StProcedure["@OfficeID"].Value = pOfficeId;
+            StProcedure["@ActID"].Value = pActId;
+            return StProcedure.ExecuteSingleAttr<Act>();
+        }
+
+        public List<Act> GetByStatusForEmployeeEx(Guid pOfficeId, bool pIsClosed, Guid? pEmployeeID = null)
+        {
+            StProcedure.ProcedureName = "Acts_GetAll";
+            StProcedure["@OfficeID"].Value = pOfficeId;
+            StProcedure["@IsClosed"].Value = pIsClosed;
+            StProcedure["@EmployeeID"].Value = pEmployeeID;
+            return StProcedure.ExecuteListAttr<Act>();
+        }
         
     }
 }

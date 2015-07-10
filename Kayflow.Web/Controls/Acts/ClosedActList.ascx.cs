@@ -9,7 +9,6 @@ public partial class Controls_Acts_ClosedActList : BaseControl
     protected List<Act> ActList_OnGetDataSource(object sender, EventArgs e)
     {
         var manager = CreateManager<ActManager>();
-        manager.Filter.AddCondition("IsClosed", eOperationType.Equal, true);
-        return manager.GetByOffice(CurrentOffice.ID);
+        return manager.Controller.GetByStatusForEmployeeEx(CurrentOffice.ID, true);
     }
 }

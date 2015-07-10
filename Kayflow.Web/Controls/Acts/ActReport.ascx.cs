@@ -9,7 +9,7 @@ public partial class Controls_Acts_ActReport : BaseControl
     {
         base.DoInitialize_1_BeforeLoadData();
         var collection = new ActCollection();
-        List<Act> list = CreateManager<ActManager>().GetByOffice(CurrentOffice.ID);
+        List<Act> list = CreateManager<ActManager>().Controller.GetByOfficeEx(CurrentOffice.ID);
         collection.BindWithDocuments(list);
         var report = new ActMainReport
         {
