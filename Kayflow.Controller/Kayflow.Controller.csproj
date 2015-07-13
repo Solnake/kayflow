@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Act\ActHistoryController.cs" />
     <Compile Include="Dictionary\OfficeTerritorialUnitController.cs" />
+    <Compile Include="Schedule\schEventController.cs" />
     <Compile Include="Settings\ActActionController.cs" />
     <Compile Include="Act\ActController.cs" />
     <Compile Include="Act\ActDocumentController.cs" />

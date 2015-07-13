@@ -117,6 +117,7 @@ public abstract class BasePage : PageBase
         pathList.Add("~/Controls/AdminControls");
         pathList.Add("~/Controls/Expense");
         pathList.Add("~/Controls/Acts");
+        pathList.Add("~/Controls/Schedule");
     }
 
     #region -= Get Values =-

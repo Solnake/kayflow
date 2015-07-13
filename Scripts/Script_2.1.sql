@@ -241,3 +241,19 @@ BEGIN
         and (@ActID is null or a.ActID=@ActID)
 END
 
+CREATE TABLE dbo.schEvent (
+  EventID uniqueidentifier CONSTRAINT DF_schEvent_EventID DEFAULT newid() NOT NULL,
+  EmployeeID uniqueidentifier NOT NULL,
+  StartDate datetime NOT NULL,
+  Subject nvarchar(128) COLLATE Cyrillic_General_CI_AS NOT NULL,
+  PRIMARY KEY CLUSTERED (EventID)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON),
+  CONSTRAINT schEvent_fk FOREIGN KEY (EmployeeID) 
+  REFERENCES dbo.Employee (EmployeeID) 
+  ON UPDATE NO ACTION
+  ON DELETE NO ACTION
+)
+ON [PRIMARY]
+GO

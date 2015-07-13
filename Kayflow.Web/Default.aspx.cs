@@ -17,6 +17,10 @@ public partial class _Default : BasePage
                 new PageLink("Проходження справи", "Default.aspx", "ReportStep"),
                 new PageLink("Налаштування", "Administration.aspx")
             };
+            if (CurrentEmployee.IsAdmin)
+            {
+                items.Insert(6, new PageLink("Планування", "Default.aspx", "ScheduleForm"));
+            }
             return items;
         }
     }
@@ -62,6 +66,11 @@ public partial class _Default : BasePage
                     View = "ReportStep",
                     Title = "Проходження справи"
                 },
+                new Crumb
+                {
+                    View = "ScheduleForm",
+                    Title = "Планування"
+                }
             };
         }
     }

@@ -51,6 +51,7 @@
     <Compile Include="CustomizeInfo.cs" />
     <Compile Include="Dictionary\OfficeTerritorialUnit.cs" />
     <Compile Include="ImportExport\MasterModel.cs" />
+    <Compile Include="Schedule\schEvent.cs" />
     <Compile Include="Settings\ActAction.cs" />
     <Compile Include="Act\ActDocument.cs" />
     <Compile Include="Act\Note.cs" />

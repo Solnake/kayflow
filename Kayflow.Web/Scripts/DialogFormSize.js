@@ -29,6 +29,7 @@ DialogForm_SetSize("ExpenseEdit", 412, 250);
 DialogForm_SetSize("ActEdit", 920, 550);
 DialogForm_SetSize("StepsEdit", 920, 250);
 DialogForm_SetSize("TerritorialUnitSearch", 620, 440);
+DialogForm_SetSize("schEventEdit", 412, 200);
 
 
 

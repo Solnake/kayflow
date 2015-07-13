@@ -52,6 +52,7 @@
     <Compile Include="Act\ActHistoryManager.cs" />
     <Compile Include="Dictionary\OfficeTerritorialUnitManager.cs" />
     <Compile Include="ImportExport\ImportExportManager.cs" />
+    <Compile Include="Schedule\schEventManager.cs" />
     <Compile Include="Settings\ActActionManager.cs" />
     <Compile Include="Act\ActDocumentManager.cs" />
     <Compile Include="Act\ActManager.cs" />
