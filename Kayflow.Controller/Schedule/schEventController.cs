@@ -15,8 +15,30 @@ namespace Kayflow.Controller
         #endregion
 
         #region -= SQL =-
-        
-       
+
+        protected override string m_GetAllQueryTemplate
+        {
+            get
+            {
+                return @"
+                    SELECT *
+                    FROM (
+                        select e.*, em.OfficeID
+                        from schEvent e
+                        join Employee em on em.EmployeeID=e.EmployeeID
+                    ) x
+                ";
+            }
+        }
+
+        protected override string m_GetQueryTemplate
+        {
+            get
+            {
+                return m_GetAllQueryTemplate + "where {1} = @{1}";
+            }
+        }
+
         #endregion
         
     }

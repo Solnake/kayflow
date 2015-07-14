@@ -21,6 +21,13 @@ namespace Kayflow.Model
         [DBMaping]
         [Required]
         [StringLength(256)]
+        [DBFieldInfo(IsName = true)]
         public string Subject { get; set; }
+
+        #region -= Just for a scheduler =-
+        public bool AllDay { get { return true; } }
+
+        public DateTime EndDate { get { return StartDate; } } 
+        #endregion
     }
 }

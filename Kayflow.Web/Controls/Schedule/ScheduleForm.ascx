@@ -1,7 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ScheduleForm.ascx.cs" Inherits="Controls_Schedule_ScheduleForm" %>
 <dx:ASPxScheduler ID="schSchedule" runat="server" Width="100%" ActiveViewType="Timeline" GroupType="Resource"
     OnDataBinding="schSchedule_OnDataBinding"
-    OnPopupMenuShowing="schSchedule_OnPopupMenuShowing">
+    OnPopupMenuShowing="schSchedule_OnPopupMenuShowing"
+    OnVisibleIntervalChanged="schSchedule_OnVisibleIntervalChanged"
+    OnBeforeExecuteCallbackCommand="schSchedule_OnBeforeExecuteCallbackCommand">
     <Views>
         <WeekView Enabled="false"></WeekView>
         <FullWeekView Enabled="False"></FullWeekView>
@@ -11,32 +13,26 @@
         <TimelineView IntervalCount="7"></TimelineView>
     </Views>
     <Storage EnableReminders="False">
+        <Appointments>
+            <Mappings Subject="Subject" AllDay="AllDay" AppointmentId="ID" ResourceId="EmployeeID" Start="StartDate" End="EndDate"></Mappings>
+        </Appointments>
         <Resources>
             <Mappings ResourceId="EmployeeID" Caption="DisplayName"/>
         </Resources>
     </Storage>
     <OptionsCustomization AllowDisplayAppointmentForm="Never" AllowInplaceEditor="None"
         AllowAppointmentDrag="None" />
-    <OptionsBehavior ShowViewNavigatorGotoDateButton="False" />
+    <OptionsBehavior ShowViewNavigatorGotoDateButton="true" />
     <OptionsForms AppointmentFormVisibility="None" GotoDateFormVisibility="None" RecurrentAppointmentDeleteFormVisibility="None"
         RecurrentAppointmentEditFormVisibility="None" />
     <ResourceNavigator Visibility="Never" />
 </dx:ASPxScheduler>
+<dx:ASPxCallback ID="cbkAction" runat="server" ClientInstanceName="cbkAction" OnCallback="cbkAction_OnCallback">
+    <ClientSideEvents CallbackComplete="function(s,e){ OnComplete(); }" />
+</dx:ASPxCallback>
 <script type="text/javascript">
     function CurrentAppID(sched) {
         return sched.appointmentSelection.selectedAppointmentIds[0];
-    }
-
-    function CurrentEID(sched, appId) {
-        if (!appId)
-            appId = sched.appointmentSelection.selectedAppointmentIds[0];
-        var event = sched.appointments[appId];
-        if (event.EID)
-            return event.EID;
-        var ps = appId.indexOf('_');
-        if (ps === -1)
-            return appId;
-        return appId.substring(0, ps);
     }
 
     function DefaultAppointmentMenuHandler(scheduler, s, eventName) {
@@ -48,11 +44,11 @@
             DialogForm_ShowFrame('Створити планування', "schEventEdit", "data=" + iDate + "&EmployeeID=" + scheduler.GetSelectedResource(), "OnComplete");
             break;
         case "EditOneEvent":
-            DialogForm_ShowFrame('Редагувати планування', "schEventEdit", "ID=" + CurrentEID(scheduler, appId), "OnComplete");
+            DialogForm_ShowFrame('Редагувати планування', "schEventEdit", "ID=" + appId, "OnComplete");
             break;
         case "DeleteOneEvent":
             if (confirm("Ви дійсно бажаєте видалити?")) {
-                //cbkAction.PerformCallback("DeleteOneEvent|" + appId);
+                cbkAction.PerformCallback("DeleteOneEvent|" + appId);
             }
             break;
         default:
@@ -61,6 +57,6 @@
     }
 
     function OnComplete(result) {
-
+        gfGetElement('<%= schSchedule.ClientID %>').Refresh();
     }
 </script>
