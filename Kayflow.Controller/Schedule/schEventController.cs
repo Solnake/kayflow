@@ -25,7 +25,7 @@ namespace Kayflow.Controller
                     FROM (
                         select e.*, em.OfficeID
                         from schEvent e
-                        join Employee em on em.EmployeeID=e.EmployeeID
+                        join EmployeeOffices em on em.EmployeeID=e.EmployeeID
                     ) x
                 ";
             }

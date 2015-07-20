@@ -70,6 +70,11 @@ public partial class _Default : BasePage
                 {
                     View = "ScheduleForm",
                     Title = "Планування"
+                },
+                new Crumb
+                {
+                    View = "CalendarForm",
+                    ParentView = "ScheduleForm"
                 }
             };
         }

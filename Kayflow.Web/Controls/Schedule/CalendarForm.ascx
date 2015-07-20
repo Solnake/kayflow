@@ -1,29 +1,19 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ScheduleForm.ascx.cs" Inherits="Controls_Schedule_ScheduleForm" %>
-<dx:ASPxScheduler ID="schSchedule" runat="server" Width="100%" ActiveViewType="Timeline" GroupType="Resource"
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CalendarForm.ascx.cs" Inherits="Controls_Schedule_CalendarForm" %>
+<dx:ASPxScheduler ID="schSchedule" runat="server" Width="100%" ActiveViewType="Month"
     OnDataBinding="schSchedule_OnDataBinding"
-    OnPopupMenuShowing="schSchedule_OnPopupMenuShowing"
-    OnVisibleIntervalChanged="schSchedule_OnVisibleIntervalChanged"
-    OnBeforeExecuteCallbackCommand="schSchedule_OnBeforeExecuteCallbackCommand">
+    OnPopupMenuShowing="schSchedule_OnPopupMenuShowing">
     <Views>
         <WeekView Enabled="false"></WeekView>
         <FullWeekView Enabled="False"></FullWeekView>
         <DayView Enabled="False"></DayView>
         <WorkWeekView Enabled="False"></WorkWeekView>
-        <MonthView Enabled="False"></MonthView>
-        <TimelineView IntervalCount="7"></TimelineView>
+        <MonthView Enabled="True"></MonthView>
+        <TimelineView Enabled="False"></TimelineView>
     </Views>
-    <Templates>
-        <VerticalResourceHeaderTemplate>
-            <a href='<%# string.Format("{0}?view=CalendarForm&ID={1}", SitePath, Container.Resource.Id) %>'><%# Container.Resource.Caption %></a>
-        </VerticalResourceHeaderTemplate>
-    </Templates>
     <Storage EnableReminders="False">
         <Appointments>
-            <Mappings Subject="Subject" AllDay="AllDay" AppointmentId="ID" ResourceId="EmployeeID" Start="StartDate" End="EndDate"></Mappings>
+            <Mappings Subject="Subject" AllDay="AllDay" AppointmentId="ID" Start="StartDate" End="EndDate"></Mappings>
         </Appointments>
-        <Resources>
-            <Mappings ResourceId="EmployeeID" Caption="DisplayName"/>
-        </Resources>
     </Storage>
     <OptionsCustomization AllowDisplayAppointmentForm="Never" AllowInplaceEditor="None"
         AllowAppointmentDrag="None" />
@@ -46,7 +36,7 @@
         case "NewEvent":
             var sInt = scheduler.selection.interval;
             var iDate = sInt.GetStart().toDateString();
-            DialogForm_ShowFrame('Створити планування', "schEventEdit", "data=" + iDate + "&EmployeeID=" + scheduler.GetSelectedResource(), "OnComplete");
+            DialogForm_ShowFrame('Створити планування', "schEventEdit", "data=" + iDate + "&EmployeeID=" + '<%= DocID %>', "OnComplete");
             break;
         case "EditOneEvent":
             DialogForm_ShowFrame('Редагувати планування', "schEventEdit", "ID=" + appId, "OnComplete");
