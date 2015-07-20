@@ -21,3 +21,4 @@ obj/
 _ReSharper*/
 Log/
 .DS_Store
+/Kayflow.Web/Bin
