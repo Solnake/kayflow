@@ -3,6 +3,8 @@
 <%@ Register Src="Controls/Content/MainMenu.ascx" TagName="MainMenu" TagPrefix="uc" %>
 <%@ Register Src="Controls/Content/UserControl.ascx" TagName="UserControl" TagPrefix="uc" %>
 <%@ Register Src="~/Controls/CompanyMessageContainer.ascx" TagPrefix="uc" TagName="CompanyMessageContainer" %>
+<%@ Register Src="~/Controls/Content/TickerControl.ascx" TagPrefix="uc" TagName="TickerControl" %>
+
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -23,6 +25,7 @@
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="noty" />
+                <asp:ScriptReference Name="tocker" />
                 <asp:ScriptReference Name="ExtLibs" />
                 <asp:ScriptReference Name="DialogJs" />
                 <asp:ScriptReference Name="CommonJs" />
@@ -48,6 +51,7 @@
                 <div class="wrapper_menu">
                     <uc:MainMenu ID="MainMenu1" runat="server" />
                 </div>
+                <uc:TickerControl runat="server" ID="tickerCompanyMessages" />
             </div>
             <div class="content">
                 <asp:ContentPlaceHolder ID="cphContent" runat="server" />

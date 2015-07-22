@@ -55,5 +55,12 @@ public class BundleConfig
                 Path = "~/Scripts/noty/jquery.noty.packaged.min.js",
                 DebugPath = "~/Scripts/noty/jquery.noty.packaged.js",
             });
+        ScriptManager.ScriptResourceMapping.AddDefinition(
+                    "tocker",
+                    new ScriptResourceDefinition
+                    {
+                        Path = "~/Scripts/ticker/jquery.easy-ticker.js",
+                        DebugPath = "~/Scripts/ticker/jquery.easy-ticker.min.js",
+                    });
 	}
 }
