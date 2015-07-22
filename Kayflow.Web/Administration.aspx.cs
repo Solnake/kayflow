@@ -40,6 +40,7 @@ public partial class Administration : BasePage
             if (CurrentEmployee.SuperAdmin)
             {
                 items.Add(new PageLink("Офіси", "Administration.aspx", "OfficeList"));
+                items.Add(new PageLink("Повідомлення", "Administration.aspx", "CompanyMessageList"));
             }
             return items;
         }
@@ -111,7 +112,12 @@ public partial class Administration : BasePage
                 {
                     View = "ActActionList",
                     Title = "Етапи проходження"
-                }
+                },
+                new Crumb
+                {
+                    View = "CompanyMessageList",
+                    Title = "Повідомлення"
+                },
             };
         }
     }

@@ -6,7 +6,7 @@ using System.Web.UI;
 /// </summary>
 public class BundleConfig
 {
-    const string jquery_version = "2.1.1";
+    const string jquery_version = "2.1.4";
 
     public static void RegisterBundles(BundleCollection bundles)
 	{
@@ -16,7 +16,8 @@ public class BundleConfig
             "~/Scripts/ModalDialogForm.js"
             ));
         bundles.Add(new ScriptBundle("~/bundles/CommonJs").Include(
-            "~/Scripts/GlobalFunctions.js"
+            "~/Scripts/GlobalFunctions.js",
+            "~/Scripts/messagesJS.js"
             ));
         bundles.Add(new ScriptBundle("~/bundles/ExtLibs").Include(
             "~/Scripts/flexmenu.min.js",
@@ -46,6 +47,13 @@ public class BundleConfig
                 CdnPath = "http://code.jquery.com/jquery-" + jquery_version + ".min.js",
                 CdnDebugPath = "http://code.jquery.com/jquery-" + jquery_version + ".js",
                 CdnSupportsSecureConnection = true
+            });
+        ScriptManager.ScriptResourceMapping.AddDefinition(
+            "noty",
+            new ScriptResourceDefinition
+            {
+                Path = "~/Scripts/noty/jquery.noty.packaged.min.js",
+                DebugPath = "~/Scripts/noty/jquery.noty.packaged.js",
             });
 	}
 }

@@ -1,13 +1,15 @@
-п»ї<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <%@ Register Src="Controls/Content/MainMenu.ascx" TagName="MainMenu" TagPrefix="uc" %>
 <%@ Register Src="Controls/Content/UserControl.ascx" TagName="UserControl" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/CompanyMessageContainer.ascx" TagPrefix="uc" TagName="CompanyMessageContainer" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>РљР°Р№Р»Р°СЃ</title>
+    <title>Кайлас</title>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -20,6 +22,7 @@
         <asp:ScriptManager runat="server">
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="noty" />
                 <asp:ScriptReference Name="ExtLibs" />
                 <asp:ScriptReference Name="DialogJs" />
                 <asp:ScriptReference Name="CommonJs" />
@@ -30,13 +33,13 @@
         <div class="container">
             <div class="header">
                 <a href="#" class="logo">
-                    <img src='<%=ImagesPath +"logo.png" %>' alt="РљР°Р№Р»Р°СЃ" />
+                    <img src='<%=ImagesPath +"logo.png" %>' alt="Кайлас" />
                 </a>
                 <div class="slogan">
-                    <span>РўРћР’ <span>В«РљР°Р№Р»Р°СЃ-РљВ»</span>
+                    <span>ТОВ <span>«Кайлас-К»</span>
                     </span>
                     <div class="slogan_mini">
-                        Р›iС†РµРЅР·РѕРІР°РЅР° Р·РµРјР»РµРІРїРѕСЂСЏРґРЅР° РѕСЂРіР°РЅiР·Р°С†iСЏ
+                        Лiцензована землевпорядна органiзацiя
                     </div>
                 </div>
                 <div class="header_right">
@@ -53,13 +56,14 @@
         </div>
         <div class="footer">
             <div class="footer_center">
-                <span>РўРћР’ вЂњРљР°Р№Р»Р°СЃ-РљвЂќ 2014</span>
+                <span>ТОВ “Кайлас-К” 2014</span>
             </div>
         </div>
+        <uc:CompanyMessageContainer runat="server" ID="CompanyMessageContainer" />
         <script type="text/javascript">
             if (typeof ASPxClientGridView !== 'undefined') {
                 ASPxClientGridView.prototype.DeleteGridRow = function (index) {
-                    if ('Р’Рё РґС–Р№СЃРЅРѕ Р±Р°Р¶Р°С”С‚Рµ РІРёРґР°Р»РёС‚Рё Р·Р°РїРёСЃ?')
+                    if ('Ви дійсно бажаєте видалити запис?')
                         this.DeleteRow(index);
                 };
             }

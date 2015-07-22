@@ -66,6 +66,7 @@
     <Compile Include="Expense\ExpenseCost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\ActListSetting.cs" />
+    <Compile Include="Settings\CompanyMessage.cs" />
     <Compile Include="Settings\Document.cs" />
     <Compile Include="Settings\DocumentGroup.cs" />
     <Compile Include="Settings\DocumentValue.cs" />

@@ -62,3 +62,19 @@ BEGIN
         and (@ActID is null or a.ActID=@ActID)
 END
 GO
+
+CREATE TABLE dbo.CompanyMessage (
+  CompanyMessageID uniqueidentifier CONSTRAINT DF_CompanyMessageID DEFAULT newid() NOT NULL,
+  OfficeID uniqueidentifier NOT NULL,
+  MessageText nvarchar(1024) COLLATE Cyrillic_General_CI_AS NOT NULL,
+  PRIMARY KEY CLUSTERED (CompanyMessageID)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON),
+  CONSTRAINT CompanyMessage_fk FOREIGN KEY (OfficeID) 
+  REFERENCES dbo.Office (OfficeID) 
+  ON UPDATE NO ACTION
+  ON DELETE NO ACTION
+)
+ON [PRIMARY]
+GO

@@ -69,6 +69,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\ActListSettingManager.cs" />
+    <Compile Include="Settings\CompanyMessageManager.cs" />
     <Compile Include="Settings\DocumentGroupManager.cs" />
     <Compile Include="Settings\DocumentManager.cs" />
     <Compile Include="Settings\DocumentValueManager.cs" />
