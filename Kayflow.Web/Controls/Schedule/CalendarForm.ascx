@@ -7,7 +7,7 @@
         <FullWeekView Enabled="False"></FullWeekView>
         <DayView Enabled="False"></DayView>
         <WorkWeekView Enabled="False"></WorkWeekView>
-        <MonthView Enabled="True"></MonthView>
+        <MonthView Enabled="True" ShowMoreButtons="False"></MonthView>
         <TimelineView Enabled="False"></TimelineView>
     </Views>
     <Storage EnableReminders="False">
