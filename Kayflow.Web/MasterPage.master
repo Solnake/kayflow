@@ -48,10 +48,10 @@
                 <div class="header_right">
                     <uc:UserControl runat="server" ID="ucUserLogin" />
                 </div>
+                <uc:TickerControl runat="server" ID="tickerCompanyMessages" />    
                 <div class="wrapper_menu">
                     <uc:MainMenu ID="MainMenu1" runat="server" />
                 </div>
-                <uc:TickerControl runat="server" ID="tickerCompanyMessages" />
             </div>
             <div class="content">
                 <asp:ContentPlaceHolder ID="cphContent" runat="server" />
@@ -59,6 +59,7 @@
             <div class="h_footer"></div>
         </div>
         <div class="footer">
+            
             <div class="footer_center">
                 <span>ׂ־ֲ “Êאיכאס-Ê” 2014</span>
             </div>
