@@ -25,7 +25,6 @@
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="noty" />
-                <asp:ScriptReference Name="tocker" />
                 <asp:ScriptReference Name="ExtLibs" />
                 <asp:ScriptReference Name="DialogJs" />
                 <asp:ScriptReference Name="CommonJs" />

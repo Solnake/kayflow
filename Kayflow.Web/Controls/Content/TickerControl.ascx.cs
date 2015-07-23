@@ -4,23 +4,41 @@ using Kayflow.Manager;
 
 public partial class Controls_Content_TickerControl : BaseControl
 {
+    private string Message
+    {
+        get
+        {
+            return Session["ListCompanyMessagesForTicker"] != null
+                ? Session["ListCompanyMessagesForTicker"].ToString()
+                : String.Empty;
+        }
+        set { Session["ListCompanyMessagesForTicker"] = value; }
+    }
+
     public string GetMessagesArray()
     {
         if (CurrentOffice == null)
             return String.Empty;
 
-        StringBuilder sb = new StringBuilder();
-        var list = CreateManager<CompanyMessageManager>().GetByOffice(CurrentOffice.ID);
-        if (list.Count==0)
-            return String.Empty;
-
-        sb.Append("&nbsp&#149;&nbsp;&nbsp;");
-        foreach (var item in list)
+        if (Session["ListCompanyMessagesForTicker"] == null)
         {
-            sb.Append(escapeHTML(item.MessageText) + "&nbsp;&nbsp;&#149;&nbsp;&nbsp;");
+            StringBuilder sb = new StringBuilder();
+            var list = CreateManager<CompanyMessageManager>().GetByOffice(CurrentOffice.ID);
+            if (list.Count == 0)
+                Message = String.Empty;
+            else
+            {
+                sb.Append("&nbsp&#149;&nbsp;&nbsp;");
+                foreach (var item in list)
+                {
+                    sb.Append(escapeHTML(item.MessageText) + "&nbsp;&nbsp;&#149;&nbsp;&nbsp;");
+                }
+
+                Message = sb.ToString();
+            }
         }
 
-        return sb.ToString();
+        return Message;
     }
 
 

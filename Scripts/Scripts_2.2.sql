@@ -8,7 +8,7 @@ BEGIN
     IF OBJECT_ID('tempdb..#ExpireSteps') IS NOT NULL DROP TABLE #ExpireSteps
     create table #ExpireSteps(
             ActID uniqueidentifier,
-            ActionName varchar(128),
+            ActionName varchar(128) COLLATE DATABASE_DEFAULT,
             DaysForAlert int,
             AlertColor int
         )
@@ -18,7 +18,7 @@ BEGIN
     create table #lastState(
             ActID uniqueidentifier,
             StateID uniqueidentifier,
-            StateName varchar(128)
+            StateName varchar(128) COLLATE DATABASE_DEFAULT 
         );
     create unique clustered index IX_lastState on #lastState(ActID);    
     
