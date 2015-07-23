@@ -52,6 +52,7 @@ public partial class Controls_Content_UserControl : BaseControl
         if (office != null)
         {
             CurrentOffice = office;
+            CurrentOfficeSettings = null;
         }
     }
 }

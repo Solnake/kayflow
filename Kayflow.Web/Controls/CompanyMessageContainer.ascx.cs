@@ -1,29 +1,15 @@
 ﻿using System;
 using System.Linq;
 using System.Web.UI;
-using Kayflow.Manager;
 
 public partial class Controls_CompanyMessageContainer : BaseControl
 {
-    private bool needShowMessage
-    {
-        get
-        {
-            if (Session["needShowMessage"] == null)
-                Session["needShowMessage"] = true;
-
-            return (bool)Session["needShowMessage"];
-        }
-        set { Session["needShowMessage"] = value; }
-    }
-
     protected override void DoInitialize_2_LoadDataInitControls()
     {
         base.DoInitialize_2_LoadDataInitControls();
-        if (CurrentOffice != null && needShowMessage)
+        if (CurrentOfficeSettings != null && CurrentOfficeSettings.NeedShowMessage)
         {
-            var array = CreateManager<CompanyMessageManager>()
-                .GetByOffice(CurrentOffice.ID)
+            var array = CurrentOfficeSettings.Messages
                 .Select(message => string.Format("'{0}'", message.MessageText))
                 .ToList();
             if (array.Count!=0)
@@ -33,7 +19,7 @@ public partial class Controls_CompanyMessageContainer : BaseControl
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), Guid.NewGuid().ToString(), script, true);
             }
 
-            needShowMessage = false;
+            CurrentOfficeSettings.NeedShowMessage = false;
         }
     }
 }

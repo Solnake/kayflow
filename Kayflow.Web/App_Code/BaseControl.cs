@@ -57,6 +57,26 @@ public abstract class BaseControl : CustomUserControlBase
         set { CurrentPage.CurrentOffice = value; }
     }
 
+    #region -= Settings =-
+
+    protected OfficeSettings CurrentOfficeSettings
+    {
+        get
+        {
+            if (CurrentOffice == null)
+                return null;
+            if (Session["CurrentOfficeSettings"] == null)
+            {
+                Session["CurrentOfficeSettings"] = new OfficeSettings(CurrentOffice.ID);
+            }
+
+            return (OfficeSettings) Session["CurrentOfficeSettings"];
+        }
+        set { Session["CurrentOfficeSettings"] = value; }
+    }
+
+    #endregion
+
     #region -= Factory =-
     protected T CreateController<T>()
         where T : DALCBase
