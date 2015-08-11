@@ -21,6 +21,14 @@ namespace Kayflow.Model
         [Description("Погодження 2")]
         Approval2,
         [Description("Оплачено на ПП Кайлас-К 2")]
-        KailasPaid2
+        KailasPaid2,
+        [Description("Нараховано")]
+        SalaryCalculated,
+        [Description("Оплачено")]
+        SalaryPaidDate,
+        [Description("Нараховано ХМЛ")]
+        CalculatedMain,
+        [Description("Оплачено ХМЛ")]
+        PaidMainDate
     }
 }

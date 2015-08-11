@@ -83,15 +83,13 @@ namespace Kayflow.Model
         public double? KailasPaid2 { get; set; }
 
         [DBMaping]
-        [Required]
-        public double SalaryCalculated { get; set; }
+        public double? SalaryCalculated { get; set; }
 
         [DBMaping]
         public DateTime? SalaryPaidDate { get; set; }
 
         [DBMaping]
-        [Required]
-        public double CalculatedMain { get; set; }
+        public double? CalculatedMain { get; set; }
 
         [DBMaping]
         public DateTime? PaidMainDate { get; set; }

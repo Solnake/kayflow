@@ -93,10 +93,12 @@ public partial class Controls_Acts_ActView : BaseControl
             lblActDate.Text = model.ActDate.Value.ToShortDateString();
         lblAreaAmount.Text = model.AreaAmount.ToString(CultureInfo.InvariantCulture);
         lblActAmount.Text = model.ActAmount.ToString(CultureInfo.InvariantCulture);
-        lblSalaryCalculated.Text = model.SalaryCalculated.ToString("n", CultureInfo.InvariantCulture);
+        if (model.SalaryCalculated.HasValue)
+            lblSalaryCalculated.Text = model.SalaryCalculated.Value.ToString("n", CultureInfo.InvariantCulture);
         if (model.SalaryPaidDate.HasValue)
             lblSalaryPaidDate.Text = model.SalaryPaidDate.Value.ToShortDateString();
-        lblCalculatedMain.Text = model.CalculatedMain.ToString("n", CultureInfo.InvariantCulture);
+        if (model.CalculatedMain.HasValue)
+        lblCalculatedMain.Text = model.CalculatedMain.Value.ToString("n", CultureInfo.InvariantCulture);
         if (model.PaidMainDate.HasValue)
             lblPaidMainDate.Text = model.PaidMainDate.Value.ToShortDateString();
         chIsClosed.Checked = model.IsClosed;

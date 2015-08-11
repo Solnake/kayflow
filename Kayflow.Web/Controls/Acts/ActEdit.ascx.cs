@@ -125,9 +125,7 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         model.ActDate = GetValue<DateTime?>(txtActDate);
         model.ActNum = GetValue<string>(txtActNum);
         FillPayments(model);
-        model.SalaryCalculated = GetValue<double>(txtSalaryCalculated);
         model.SalaryPaidDate = GetValue<DateTime?>(txtSalaryPaidDate);
-        model.CalculatedMain = GetValue<double>(txtCalculatedMain);
         model.PaidMainDate = GetValue<DateTime?>(txtPaidMainDate);
         model.Description = GetValue<string>(txtDescription);
         model.IsClosed = chIsClosed.Checked;
@@ -183,13 +181,25 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
             var layoutItem = frmEditForm.FindItemByFieldName(item.ToString());
             if (layoutItem == null)
                 continue;
-            var txt = layoutItem.Controls.OfType<ASPxSpinEdit>().FirstOrDefault();
+            var txt = layoutItem.Controls.OfType<ASPxButtonEditBase>().FirstOrDefault();
             if (txt == null)
                 continue;
-            if (!settings.Find(i => i.PaymentFieldID == item).Show && txt.Value == null)
+            if (!settings.Find(i => i.PaymentFieldID == item).Show)
             {
                 layoutItem.Visible = false;
             }
+        }
+
+        var salaryGroup = frmEditForm.FindItemOrGroupByName("SalaryGroup") as LayoutGroup;
+        if (salaryGroup != null)
+        {
+            salaryGroup.Visible = salaryGroup.Items.Cast<LayoutItem>().Any(i => i.Visible);
+        }
+
+        var salaryTab = frmEditForm.FindItemOrGroupByName("SalaryTab") as LayoutGroup;
+        if (salaryTab != null)
+        {
+            salaryTab.Visible = salaryTab.Items.Cast<LayoutItemBase>().Any(i => i.Visible);
         }
     }
 
@@ -234,6 +244,12 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
                 case ePaymentDataField.KailasPaid2:
                     pModel.KailasPaid2 = GetValue<double?>(txt);
                     break;
+                case ePaymentDataField.SalaryCalculated:
+                    pModel.SalaryCalculated = GetValue<double?>(txt);
+                    break;
+                case ePaymentDataField.CalculatedMain:
+                    pModel.CalculatedMain = GetValue<double?>(txt);
+                    break;
             }
         }
     }
@@ -245,15 +261,15 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         if (groupDocs == null)
             return result;
         result.AddRange(from @group in groupDocs.Items.Cast<LayoutGroup>()
-            from item in @group.Items.Cast<LayoutItem>()
-            from ddl in item.Controls.Cast<ASPxComboBox>()
-            let value = GetValue<Guid?>(ddl)
-            where value.HasValue
-            select new ActDocument
-            {
-                DocumentID = Guid.Parse(ddl.ID),
-                DocumentValueID = value.Value
-            });
+                        from item in @group.Items.Cast<LayoutItem>()
+                        from ddl in item.Controls.Cast<ASPxComboBox>()
+                        let value = GetValue<Guid?>(ddl)
+                        where value.HasValue
+                        select new ActDocument
+                        {
+                            DocumentID = Guid.Parse(ddl.ID),
+                            DocumentValueID = value.Value
+                        });
         return result;
     }
 
@@ -263,7 +279,7 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         {
             Width = Unit.Pixel(225),
             ID = id,
-            ValueType = typeof (Guid)
+            ValueType = typeof(Guid)
         };
         InitCombo(comboBox, CreateManager<DocumentValueManager>().GetBySet(valueSetId), e0Type.PlsSelect);
         return comboBox;

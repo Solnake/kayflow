@@ -183,9 +183,9 @@
                         </dx:LayoutGroup>
                     </Items>
                 </dx:LayoutGroup>
-                <dx:LayoutGroup Caption="Оплата" ColCount="2" Height="420px" VerticalAlign="Top">
+                <dx:LayoutGroup Caption="Оплата" ColCount="2" Height="420px" VerticalAlign="Top" Name="SalaryTab">
                     <Items>
-                        <dx:LayoutGroup Caption="Зарплата" GroupBoxDecoration="HeadingLine" RowSpan="5">
+                        <dx:LayoutGroup Caption="Зарплата" GroupBoxDecoration="HeadingLine" RowSpan="5" Name="SalaryGroup">
                             <Items>
                                 <dx:LayoutItem FieldName="SalaryCalculated" Caption="Нараховано">
                                     <LayoutItemNestedControlCollection>

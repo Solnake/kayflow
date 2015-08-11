@@ -38,7 +38,7 @@ namespace Kayflow.Manager
                         Show = true
                     });
             }
-            return list;
+            return list.OrderBy(i => (int) i.PaymentFieldID).ToList();
         }
     }
 }
