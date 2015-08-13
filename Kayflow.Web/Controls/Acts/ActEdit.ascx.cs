@@ -139,9 +139,10 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
 
     protected void frmEditForm_OnInit(object sender, EventArgs e)
     {
-        var groupDocs = frmEditForm.FindItemOrGroupByName("groupDocs") as LayoutGroup;
-        if (groupDocs == null)
+        var tabMain = frmEditForm.FindItemOrGroupByName("tabMain") as TabbedLayoutGroup;
+        if (tabMain==null)
             return;
+
         foreach (var documentItem in _documents.GroupBy(d => d.DocumentGroupID, (key, documents) =>
         {
             var enumerable = documents as IList<Document> ?? documents.ToList();
@@ -154,12 +155,16 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
             };
         }).OrderBy(d => d.DocGroup.GroupOrdNum))
         {
-            var @group = groupDocs.Items.Add<LayoutGroup>(documentItem.DocGroup.GroupName,
+            var @group = tabMain.Items.Add<LayoutGroup>(documentItem.DocGroup.GroupName,
                 string.Format("group{0}", documentItem.GroupId));
-            @group.GroupBoxDecoration = GroupBoxDecoration.HeadingLine;
+            @group.Height = Unit.Pixel(420);
+            @group.ColCount = 2;
+            //@group.CellStyle.Paddings.Padding = Unit.Pixel(0);
+            @group.GroupBoxStyle.VerticalAlign = VerticalAlign.Top;
             foreach (var document in documentItem.Documents.OrderBy(d => d.OrdNum))
             {
                 var item = @group.Items.Add<LayoutItem>(document.DocumentName, string.Format("item{0}", document.ID));
+                
                 var edit = GetEdit(document.ID.ToString(), document.ValueSetID);
                 var actDocument = _actDocuments.Find(l => l.DocumentID == document.ID);
                 if (actDocument != null)
@@ -170,7 +175,6 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
                 item.Controls.Add(edit);
             }
         }
-        groupDocs.Visible = groupDocs.Items.Count > 0;
     }
 
     private void SetPayments()
@@ -257,10 +261,11 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
     private List<ActDocument> getActDocuments()
     {
         var result = new List<ActDocument>();
-        var groupDocs = frmEditForm.FindItemOrGroupByName("groupDocs") as LayoutGroup;
-        if (groupDocs == null)
+        var tabMain = frmEditForm.FindItemOrGroupByName("tabMain") as TabbedLayoutGroup;
+        if (tabMain == null)
             return result;
-        result.AddRange(from @group in groupDocs.Items.Cast<LayoutGroup>()
+
+        result.AddRange(from @group in tabMain.Items.Cast<LayoutGroup>().Where(g => g.Name.StartsWith("group"))
                         from item in @group.Items.Cast<LayoutItem>()
                         from ddl in item.Controls.Cast<ASPxComboBox>()
                         let value = GetValue<Guid?>(ddl)

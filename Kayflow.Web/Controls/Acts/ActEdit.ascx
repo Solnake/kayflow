@@ -2,7 +2,7 @@
 <dx:ASPxFormLayout ID="frmEditForm" runat="server" AlignItemCaptionsInAllGroups="True" Width="100%"
     OnInit="frmEditForm_OnInit">
     <Items>
-        <dx:TabbedLayoutGroup>
+        <dx:TabbedLayoutGroup Name="tabMain">
             <Paddings Padding="0px" />
             <Styles>
                 <ContentStyle>
@@ -284,11 +284,6 @@
                             </LayoutItemNestedControlCollection>
                         </dx:LayoutItem>
                     </Items>
-                    <CellStyle>
-                        <Paddings Padding="0px" />
-                    </CellStyle>
-                </dx:LayoutGroup>
-                <dx:LayoutGroup Caption="Додаткові дані" Height="420px" ColCount="2" Name="groupDocs">
                     <CellStyle>
                         <Paddings Padding="0px" />
                     </CellStyle>
