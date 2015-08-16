@@ -7,7 +7,7 @@
     <Columns>
         <dx:GridViewDataCheckColumn FieldName="Show" Caption=" " Width="40px"/>
         <dx:GridViewDataTextColumn FieldName="OrdNum" Caption="№ п/п" Width="80px" SortIndex="0" SortOrder="Ascending" />
-        <dx:GridViewDataTextColumn FieldName="Name" Caption="Вид витрат" />
+        <dx:GridViewDataTextColumn FieldName="Name" Caption="Група" />
         <dx:GridViewDataColumn Width="64px">
             <DataItemTemplate>
                 <table>
