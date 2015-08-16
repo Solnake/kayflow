@@ -33,6 +33,7 @@ public partial class Controls_AdminControls_DocumentEdit : BaseEditControl<Docum
         model.Show = chShow.Checked;
         model.OrdNum = GetValue<int>(txtOrdNum);
         model.ValueSetID = GetValue<Guid>(ddlValueSet);
+        model.ShowComments = chShowComments.Checked;
     }
 
     protected override void InitControlsByModelData(Document model)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
+using DevExpress.Utils;
 using DevExpress.Web;
 using Kayflow.Controller;
 using Kayflow.Manager;
@@ -52,7 +53,8 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
                         Hidden = false,
                         ValueSetID = item.ValueSetID,
                         GroupName = item.GroupName,
-                        GroupOrdNum = item.GroupOrdNum
+                        GroupOrdNum = item.GroupOrdNum,
+                        ShowComments = item.ShowComments
                     });
                 }
 
@@ -157,14 +159,25 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         {
             var @group = tabMain.Items.Add<LayoutGroup>(documentItem.DocGroup.GroupName,
                 string.Format("group{0}", documentItem.GroupId));
-            @group.Height = Unit.Pixel(420);
+            //@group.Height = Unit.Pixel(420);
             @group.ColCount = 2;
-            //@group.CellStyle.Paddings.Padding = Unit.Pixel(0);
             @group.GroupBoxStyle.VerticalAlign = VerticalAlign.Top;
             foreach (var document in documentItem.Documents.OrderBy(d => d.OrdNum))
             {
-                var item = @group.Items.Add<LayoutItem>(document.DocumentName, string.Format("item{0}", document.ID));
-                
+                var itemContainer = @group;
+                if (document.ShowComments)
+                {
+                    itemContainer = @group.Items.Add<LayoutGroup>(document.DocumentName,
+                        string.Format("itemGroup{0}", document.ID));
+                    itemContainer.ShowCaption = DefaultBoolean.False;
+                    itemContainer.GroupBoxStyle.Border.BorderStyle = BorderStyle.None;
+                    itemContainer.Paddings.Padding = Unit.Pixel(0);
+                    itemContainer.CellStyle.Paddings.Padding = Unit.Pixel(0);
+                    itemContainer.GroupBoxDecoration = GroupBoxDecoration.None;
+                }
+
+                #region -= Item =-
+                var item = itemContainer.Items.Add<LayoutItem>(document.DocumentName, string.Format("item{0}", document.ID));
                 var edit = GetEdit(document.ID.ToString(), document.ValueSetID);
                 var actDocument = _actDocuments.Find(l => l.DocumentID == document.ID);
                 if (actDocument != null)
@@ -172,7 +185,20 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
                     edit.Value = actDocument.DocumentValueID;
                 }
 
-                item.Controls.Add(edit);
+                item.Controls.Add(edit); 
+                #endregion
+
+                if (document.ShowComments)
+                {
+                    var itemComment = itemContainer.Items.Add<LayoutItem>("Коментар", string.Format("itemComment{0}", document.ID));
+                    var commentEdit = GetEdit(document.ID.ToString());
+                    if (actDocument != null)
+                    {
+                        commentEdit.Value = actDocument.Comment;
+                    }
+
+                    itemComment.Controls.Add(commentEdit); 
+                }
             }
         }
     }
@@ -265,16 +291,61 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         if (tabMain == null)
             return result;
 
-        result.AddRange(from @group in tabMain.Items.Cast<LayoutGroup>().Where(g => g.Name.StartsWith("group"))
-                        from item in @group.Items.Cast<LayoutItem>()
-                        from ddl in item.Controls.Cast<ASPxComboBox>()
-                        let value = GetValue<Guid?>(ddl)
-                        where value.HasValue
-                        select new ActDocument
+        foreach (var @group in tabMain.Items.Cast<LayoutGroup>().Where(g => g.Name.StartsWith("group")))
+        {
+            foreach (var container in @group.Items.Cast<LayoutItemBase>())
+            {
+                if (container is LayoutGroup)
+                {
+                    ActDocument document = null;
+                    var skipStep = false;
+                    foreach (var item in (container as LayoutGroup).Items.Cast<LayoutItem>())
+                    {
+                        if (skipStep)
+                            continue;
+
+                        foreach (var edit in item.Controls.Cast<ASPxEdit>())
                         {
-                            DocumentID = Guid.Parse(ddl.ID),
-                            DocumentValueID = value.Value
-                        });
+                            if (document == null)
+                            {
+                                var value = GetValue<Guid?>(edit);
+                                if (!value.HasValue)
+                                {
+                                    skipStep = true;
+                                    continue;
+                                }
+
+                                document = new ActDocument
+                                {
+                                    DocumentID = Guid.Parse(edit.ID),
+                                    DocumentValueID = value.Value
+                                };
+                                result.Add(document);
+                            }
+                            else
+                            {
+                                    document.Comment = GetValue<string>(edit);
+                            }
+                        }
+                    }
+                }
+
+                if (container is LayoutItem)
+                {
+                    foreach (var edit in (container as LayoutItem).Controls.Cast<ASPxEdit>())
+                    {
+                        var document = new ActDocument();
+                        var value = GetValue<Guid?>(edit);
+                        if (value.HasValue)
+                        {
+                            document.DocumentID = Guid.Parse(edit.ID);
+                            document.DocumentValueID = GetValue<Guid>(edit);
+                            result.Add(document);
+                        }
+                    }
+                }
+            }
+        }
         return result;
     }
 
@@ -288,5 +359,15 @@ public partial class Controls_Acts_ActEdit : BaseEditControl<ActManager, ActCont
         };
         InitCombo(comboBox, CreateManager<DocumentValueManager>().GetBySet(valueSetId), e0Type.PlsSelect);
         return comboBox;
+    }
+
+    private ASPxTextBox GetEdit(string id)
+    {
+        return new ASPxTextBox
+        {
+            Width = Unit.Pixel(225),
+            ID = String.Format("txtComment{0}", id),
+            MaxLength = 256
+        }; ;
     }
 }

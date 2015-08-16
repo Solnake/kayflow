@@ -230,6 +230,7 @@
                             <dx:GridViewDataTextColumn FieldName="GroupName" Caption="Група" GroupIndex="0" />
                             <dx:GridViewDataDateColumn FieldName="DocumentName" Caption="Документ" />
                             <dx:GridViewDataDateColumn FieldName="DocValue" Caption="Статус" Width="90px" />
+                            <dx:GridViewDataTextColumn FieldName="Comment" Caption="Коментар"/>
                         </Columns>
                         <SettingsBehavior AllowFocusedRow="False" AllowSort="False" />
                     </dx:ASPxGridView>

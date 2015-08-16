@@ -41,6 +41,13 @@
                 </dx:LayoutItemNestedControlContainer>
             </LayoutItemNestedControlCollection>
         </dx:LayoutItem>
+        <dx:LayoutItem Caption="Коментар" FieldName="ShowComments">
+            <LayoutItemNestedControlCollection>
+                <dx:LayoutItemNestedControlContainer runat="server" SupportsDisabledAttribute="True">
+                    <dx:ASPxCheckBox ID="chShowComments" runat="server" />
+                </dx:LayoutItemNestedControlContainer>
+            </LayoutItemNestedControlCollection>
+        </dx:LayoutItem>
         <dx:LayoutItem Caption="Тип даних" FieldName="ValueSetID">
             <LayoutItemNestedControlCollection>
                 <dx:LayoutItemNestedControlContainer runat="server" SupportsDisabledAttribute="True">

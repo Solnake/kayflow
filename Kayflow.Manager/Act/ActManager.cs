@@ -22,6 +22,7 @@ namespace Kayflow.Manager
                         manager.Model = oldList.Find(o => o.DocumentID == item.DocumentID) ?? item;
                         manager.Model.ActID = Model.ID;
                         manager.Model.DocumentValueID = item.DocumentValueID;
+                        manager.Model.Comment = item.Comment;
                         manager.Save();
                     }
                     foreach (var document in oldList.FindAll(o=>pList.All(l=>l.DocumentID!=o.DocumentID)))

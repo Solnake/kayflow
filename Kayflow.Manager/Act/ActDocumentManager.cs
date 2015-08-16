@@ -32,7 +32,8 @@ namespace Kayflow.Manager
                         GroupOrdNum = document.GroupOrdNum,
                         DocumentGroupID = document.DocumentGroupID,
                         ValueSetID = document.ValueSetID,
-                        DocColor = null
+                        DocColor = null,
+                        ShowComments = document.ShowComments
                     });
             }
             return list.OrderBy(l => l.GroupOrdNum).ThenBy(l => l.DocumentOrdNum).ToList();

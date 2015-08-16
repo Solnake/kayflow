@@ -107,3 +107,19 @@ WITH (
   ALLOW_PAGE_LOCKS = ON)
 ON [PRIMARY]
 GO
+
+ALTER TABLE dbo.Document
+ADD ShowComments bit NULL
+GO
+
+update Document
+set ShowComments = 0
+GO
+
+ALTER TABLE dbo.Document
+ALTER COLUMN ShowComments bit NOT NULL
+GO
+
+ALTER TABLE dbo.ActDocument
+ADD Comment nvarchar(256) NULL
+GO

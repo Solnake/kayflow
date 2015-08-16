@@ -32,6 +32,10 @@ namespace Kayflow.Model
         [Required]
         public Guid ValueSetID { get; set; }
 
+        [DBMaping]
+        [Required]
+        public bool ShowComments { get; set; }
+
         public string SetName { get; set; }
         public string GroupName { get; set; }
         public int GroupOrdNum { get; set; }

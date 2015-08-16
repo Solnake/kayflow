@@ -123,6 +123,7 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
     private XRTableCell sumKailasPaid2;
     private XRTableCell xrTableCell27;
     private CalculatedField cfOnDate;
+    private XRTableCell xrTableCell65;
 	/// <summary>
 	/// Required designer variable.
 	/// </summary>
@@ -274,6 +275,7 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.sumKailasPaid2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.cfOnDate = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrTableCell65 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.tblActs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblActHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblGroupDate)).BeginInit();
@@ -1279,14 +1281,15 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.tblDocument.Name = "tblDocument";
             this.tblDocument.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow7});
-            this.tblDocument.SizeF = new System.Drawing.SizeF(400F, 15F);
+            this.tblDocument.SizeF = new System.Drawing.SizeF(1602F, 15F);
             this.tblDocument.StylePriority.UseBorders = false;
             // 
             // xrTableRow7
             // 
             this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell62,
-            this.xrTableCell64});
+            this.xrTableCell64,
+            this.xrTableCell65});
             this.xrTableRow7.Name = "xrTableRow7";
             this.xrTableRow7.Weight = 1D;
             // 
@@ -1566,6 +1569,17 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             // 
             this.cfOnDate.Expression = "GetDate([MeteringDate])";
             this.cfOnDate.Name = "cfOnDate";
+            // 
+            // xrTableCell65
+            // 
+            this.xrTableCell65.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Documents.Comment")});
+            this.xrTableCell65.Name = "xrTableCell65";
+            this.xrTableCell65.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
+            this.xrTableCell65.StylePriority.UsePadding = false;
+            this.xrTableCell65.StylePriority.UseTextAlignment = false;
+            this.xrTableCell65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell65.Weight = 6.01D;
             // 
             // ActMainReport
             // 

@@ -21,6 +21,10 @@ namespace Kayflow.Model
         [DBMaping]
         [Required]
         public Guid DocumentValueID { get; set; }
+
+        [DBMaping]
+        [StringLength(256)]
+        public string Comment { get; set; }
         
         [DBFieldInfo(IsName = true)]
         public string DocumentName { get; set; }
@@ -31,5 +35,7 @@ namespace Kayflow.Model
         public int GroupOrdNum { get; set; }
         public Guid ValueSetID { get; set; }
         public int? DocColor { get; set; }
+
+        public bool ShowComments { get; set; }
     }
 }

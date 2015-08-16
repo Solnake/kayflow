@@ -24,7 +24,7 @@ namespace Kayflow.Controller
                 return @"
                     SELECT *
                     FROM (
-                        select a.*, d.DocumentName, d.OrdNum DocumentOrdNum, d.ValueSetID
+                        select a.*, d.DocumentName, d.OrdNum DocumentOrdNum, d.ValueSetID, d.ShowComments
 	                        , g.GroupName, g.OrdNum GroupOrdNum, g.DocumentGroupID
                             , v.DocValue, v.DocColor
 							, em.OfficeID

@@ -9,6 +9,7 @@
         <dx:GridViewDataTextColumn FieldName="OrdNum" Caption="№ п/п" Width="80px" SortIndex="0" SortOrder="Ascending" />
         <dx:GridViewDataTextColumn FieldName="Name" Caption="Вид витрат" />
         <dx:GridViewDataTextColumn FieldName="SetName" Caption="Тип даних" Width="100px" />
+        <dx:GridViewDataCheckColumn FieldName="ShowComments" Caption="Коментар" Width="100px"/>
         <dx:GridViewDataTextColumn FieldName="GroupName" Caption="Група" GroupIndex="0" />
         <dx:GridViewDataColumn Width="64px">
             <DataItemTemplate>
