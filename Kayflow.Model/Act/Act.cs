@@ -99,7 +99,7 @@ namespace Kayflow.Model
         public DateTime? ActDate { get; set; }
 
         [DBMaping]
-        [StringLength(10)]
+        [StringLength(12)]
         [CustomizeInfo(Customizable = true, DisplayName = "№ договору")]
         public string ActNum { get; set; }
 

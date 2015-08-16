@@ -94,7 +94,7 @@
                                 <dx:LayoutItem FieldName="ActNum" Caption="№ договору">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxTextBox ID="txtActNum" runat="server" MaxLength="10" />
+                                            <dx:ASPxTextBox ID="txtActNum" runat="server" MaxLength="12" />
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
