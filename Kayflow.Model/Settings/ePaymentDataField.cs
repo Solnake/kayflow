@@ -6,7 +6,7 @@ namespace Kayflow.Model
     {
         [Description("Загальна вартість робіт")]
         TotalCost = 1,
-        [Description("Оплачено на вимірах")]
+        [Description("Аванс")]
         PaidOn,
         [Description("Залишено на місці")]
         LeftOn,

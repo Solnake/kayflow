@@ -15,7 +15,7 @@
     OnHtmlRowPrepared="gridList_OnHtmlRowPrepared">
     <Columns>
         <dx:GridViewDataDateColumn FieldName="MeteringDate" Caption="Дата" SortIndex="0" SortOrder="Descending" Width="100px" />
-        <dx:GridViewDataTextColumn FieldName="EmployeeName" Caption="Землевпорядник" />
+        <dx:GridViewDataTextColumn FieldName="EmployeeName" Caption="Працівник" />
         <dx:GridViewDataTextColumn FieldName="UnitName" Caption="Нас. пункт" />
         <dx:GridViewDataTextColumn FieldName="Address" Caption="Адреса" />
         <dx:GridViewDataTextColumn FieldName="CustomerName" Caption="Замовник" />

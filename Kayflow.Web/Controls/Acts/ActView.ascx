@@ -15,7 +15,7 @@
                 <dx:ContentControl runat="server">
                     <div class="wrapper_horizontal_half">
                         <div class="wrapper_horizontal">
-                            <asp:Label runat="server" CssClass="title" Text="Землевпорядник:" />
+                            <asp:Label runat="server" CssClass="title" Text="Працівник:" />
                             <div class="textbox">
                                 <asp:Label runat="server" ID="lblEmployeeName" CssClass="text_box" />
                             </div>
@@ -166,7 +166,7 @@
                             </div>
                         </asp:Panel>
                         <asp:Panel runat="server" ID="panPaidOn" CssClass="wrapper_horizontal">
-                            <asp:Label runat="server" CssClass="title_wide" Text="Опл. на вимірах:" />
+                            <asp:Label runat="server" CssClass="title_wide" Text="Аванс:" />
                             <div class="textbox_short">
                                 <asp:Label runat="server" ID="lblPaidOn" CssClass="text_box" />
                             </div>

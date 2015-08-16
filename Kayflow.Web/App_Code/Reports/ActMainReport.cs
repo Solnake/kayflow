@@ -253,6 +253,7 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell62 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell64 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell65 = new DevExpress.XtraReports.UI.XRTableCell();
             this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -275,7 +276,6 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.sumKailasPaid2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.cfOnDate = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrTableCell65 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.tblActs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblActHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblGroupDate)).BeginInit();
@@ -637,7 +637,7 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTableCell40.Name = "xrTableCell40";
             this.xrTableCell40.StylePriority.UseBorders = false;
-            this.xrTableCell40.Text = "Землевпорядник";
+            this.xrTableCell40.Text = "Працівник";
             this.xrTableCell40.Weight = 0.33707868689518711D;
             // 
             // xrTableCell41
@@ -743,7 +743,7 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.xrTableCell50.StylePriority.UseBorders = false;
             this.xrTableCell50.StylePriority.UseTextAlignment = false;
             this.xrTableCell50.Tag = "PaidOn";
-            this.xrTableCell50.Text = "Оплачено на вимірах";
+            this.xrTableCell50.Text = "Аванс";
             this.xrTableCell50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell50.Weight = 0.093632966122240036D;
             // 
@@ -1313,6 +1313,17 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             this.xrTableCell64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell64.Weight = 0.5D;
             // 
+            // xrTableCell65
+            // 
+            this.xrTableCell65.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Documents.Comment")});
+            this.xrTableCell65.Name = "xrTableCell65";
+            this.xrTableCell65.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
+            this.xrTableCell65.StylePriority.UsePadding = false;
+            this.xrTableCell65.StylePriority.UseTextAlignment = false;
+            this.xrTableCell65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell65.Weight = 6.01D;
+            // 
             // GroupHeader2
             // 
             this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -1569,17 +1580,6 @@ public class ActMainReport : DevExpress.XtraReports.UI.XtraReport
             // 
             this.cfOnDate.Expression = "GetDate([MeteringDate])";
             this.cfOnDate.Name = "cfOnDate";
-            // 
-            // xrTableCell65
-            // 
-            this.xrTableCell65.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Documents.Comment")});
-            this.xrTableCell65.Name = "xrTableCell65";
-            this.xrTableCell65.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
-            this.xrTableCell65.StylePriority.UsePadding = false;
-            this.xrTableCell65.StylePriority.UseTextAlignment = false;
-            this.xrTableCell65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell65.Weight = 6.01D;
             // 
             // ActMainReport
             // 

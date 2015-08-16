@@ -15,7 +15,7 @@
                         <Paddings Padding="0px" />
                     </CellStyle>
                     <Items>
-                        <dx:LayoutItem Caption="Землевпорядник" FieldName="EmployeeID">
+                        <dx:LayoutItem Caption="Працівник" FieldName="EmployeeID">
                             <LayoutItemNestedControlCollection>
                                 <dx:LayoutItemNestedControlContainer runat="server">
                                     <dx:ASPxComboBox ID="ddlEmployees" runat="server" SkinID="Required" ValueType="System.Guid">
@@ -227,7 +227,7 @@
                                 </dx:LayoutItemNestedControlContainer>
                             </LayoutItemNestedControlCollection>
                         </dx:LayoutItem>
-                        <dx:LayoutItem FieldName="PaidOn" Caption="Опл. на вимірах">
+                        <dx:LayoutItem FieldName="PaidOn" Caption="Аванс">
                             <LayoutItemNestedControlCollection>
                                 <dx:LayoutItemNestedControlContainer runat="server">
                                     <dx:ASPxSpinEdit ID="txtPaidOn" runat="server" NumberType="Float" />
