@@ -60,6 +60,18 @@ public partial class Controls_Acts_ActView : BaseControl
                 case ePaymentDataField.TotalCost:
                     ApplyPayment(settings, item, model.TotalCost, panTotalCost, lblTotalCost);
                     break;
+                case ePaymentDataField.CalculatedMain:
+                    ApplyPayment(settings, item, model.CalculatedMain, panCalculatedMain, lblCalculatedMain);
+                    break;
+                case ePaymentDataField.SalaryCalculated:
+                    ApplyPayment(settings, item, model.SalaryCalculated, panSalaryCalculated, lblSalaryCalculated);
+                    break;
+                case ePaymentDataField.PaidMainDate:
+                    ApplyPayment(settings, item, model.PaidMainDate, panPaidMainDate, lblPaidMainDate);
+                    break;
+                case ePaymentDataField.SalaryPaidDate:
+                    ApplyPayment(settings, item, model.SalaryPaidDate, panSalaryPaidDate, lblSalaryPaidDate);
+                    break;
             }
         }
     }
@@ -74,9 +86,27 @@ public partial class Controls_Acts_ActView : BaseControl
             lbl.Text = value.Value.ToString("n", CultureInfo.InvariantCulture);
         }
 
+        paymentVisibleSet(show);
+    }
+
+    private void paymentVisibleSet(bool show)
+    {
         var tabPayments = pageActView.TabPages.FindByName("tabPayments");
         tabPayments.Visible = show || tabPayments.Visible;
-    }   
+    }
+
+    private void ApplyPayment(List<PaymentDataSettings> settings, ePaymentDataField item, DateTime? value, Panel pan, Label lbl)
+    {
+        var show = settings.Find(i => i.PaymentFieldID == item).Show
+                   || value.HasValue;
+        pan.Visible = show;
+        if (show && value.HasValue)
+        {
+            lbl.Text = value.Value.ToShortDateString();
+        }
+
+        paymentVisibleSet(show);
+    }
 
     private void LoadMainData(Act model)
     {
@@ -93,12 +123,8 @@ public partial class Controls_Acts_ActView : BaseControl
             lblActDate.Text = model.ActDate.Value.ToShortDateString();
         lblAreaAmount.Text = model.AreaAmount.ToString(CultureInfo.InvariantCulture);
         lblActAmount.Text = model.ActAmount.ToString(CultureInfo.InvariantCulture);
-        if (model.SalaryCalculated.HasValue)
-            lblSalaryCalculated.Text = model.SalaryCalculated.Value.ToString("n", CultureInfo.InvariantCulture);
         if (model.SalaryPaidDate.HasValue)
             lblSalaryPaidDate.Text = model.SalaryPaidDate.Value.ToShortDateString();
-        if (model.CalculatedMain.HasValue)
-        lblCalculatedMain.Text = model.CalculatedMain.Value.ToString("n", CultureInfo.InvariantCulture);
         if (model.PaidMainDate.HasValue)
             lblPaidMainDate.Text = model.PaidMainDate.Value.ToShortDateString();
         chIsClosed.Checked = model.IsClosed;

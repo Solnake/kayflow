@@ -135,30 +135,30 @@
             <ContentCollection>
                 <dx:ContentControl runat="server">
                     <div class="wrapper_horizontal_half">
-                        <div class="wrapper_horizontal">
+                         <asp:Panel runat="server" ID="panSalaryCalculated" CssClass="wrapper_horizontal">
                             <asp:Label runat="server" CssClass="title" Text="Нараховано:" />
                             <div class="textbox">
                                 <asp:Label runat="server" ID="lblSalaryCalculated" CssClass="text_box" />
                             </div>
-                        </div>
-                        <div class="wrapper_horizontal">
+                       </asp:Panel>
+                         <asp:Panel runat="server" ID="panSalaryPaidDate" CssClass="wrapper_horizontal">
                             <asp:Label runat="server" CssClass="title" Text="Оплочено:" />
                             <div class="textbox">
                                 <asp:Label runat="server" ID="lblSalaryPaidDate" CssClass="text_box" />
                             </div>
-                        </div>
-                        <div class="wrapper_horizontal">
+                        </asp:Panel>
+                         <asp:Panel runat="server" ID="panCalculatedMain" CssClass="wrapper_horizontal">
                             <asp:Label runat="server" CssClass="title" Text="Нараховано ХМЛ:" />
                             <div class="textbox">
                                 <asp:Label runat="server" ID="lblCalculatedMain" CssClass="text_box" />
                             </div>
-                        </div>
-                        <div class="wrapper_horizontal">
+                        </asp:Panel>
+                         <asp:Panel runat="server" ID="panPaidMainDate" CssClass="wrapper_horizontal">
                             <asp:Label runat="server" CssClass="title" Text="Оплочено:" />
                             <div class="textbox">
                                 <asp:Label runat="server" ID="lblPaidMainDate" CssClass="text_box" />
                             </div>
-                        </div>
+                        </asp:Panel>
                         <asp:Panel runat="server" ID="panTotalCost" CssClass="wrapper_horizontal">
                             <asp:Label runat="server" CssClass="title_wide" Text="Вартість робіт:" />
                             <div class="textbox_short">
