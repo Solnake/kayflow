@@ -4,7 +4,7 @@ using Kayflow.Controller;
 using Kayflow.Manager;
 using Kayflow.Model;
 
-public partial class Controls_Acts_StatusHistoryList : BaseListControl<NoteManager, NoteController, Note>
+public partial class Controls_Acts_StatusHistoryList : BaseListControl<StateHistoryManager, StateHistoryController, StateHistory>
 {
     protected override string AdditionalEditParams
     {
