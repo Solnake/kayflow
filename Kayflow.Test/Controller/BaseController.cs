@@ -1,4 +1,5 @@
-﻿using Kayflow.Controller;
+﻿using System;
+using Kayflow.Controller;
 using Kayflow.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,6 +16,14 @@ namespace Kayflow.Test.Controller
             var controller = CreateController<TC>();
             var list = controller.GetAll();
             Assert.IsNotNull(list); 
+        }
+
+        [TestMethod]
+        public virtual void TestNull_Get()
+        {
+            var contoller = CreateController<TC>();
+            var model = contoller.Get(Guid.Empty);
+            Assert.IsNull(model);
         }
     }
 }
