@@ -69,6 +69,7 @@
     <Compile Include="Controller\BaseTestController.cs" />
     <Compile Include="Controller\EmployeeControllerTest.cs" />
     <Compile Include="Controller\OfficeControllerTest.cs" />
+    <Compile Include="Model\TestConfig.cs" />
     <Compile Include="Model\Settings\ActActionTest.cs" />
     <Compile Include="Model\Settings\ActListSettingTest.cs" />
     <Compile Include="Model\Staff\EmployeeTest.cs" />

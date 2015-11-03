@@ -22,3 +22,4 @@ _ReSharper*/
 Log/
 .DS_Store
 /Kayflow.Web/Bin
+/TestResults/d8eab610-8890-4d49-a82a-c36180685536/*.coverage
